@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/spacing_16dp"
+    android:background="?attr/selectableItemBackground">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProjectList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_234dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/imgSell"
+        android:layout_width="72dp"
+        android:layout_height="@dimen/spacing_24dp"
+        android:layout_marginTop="@dimen/spacing_24dp"
+        app:layout_constraintStart_toStartOf="@id/ivProjectList"
+        app:layout_constraintTop_toTopOf="@id/ivProjectList"
+        app:srcCompat="@drawable/ic_sell" />
+
+    <TextView
+        android:id="@+id/tvSell"
+        style="@style/StyleTextViewMedium.Small.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingEnd="@dimen/spacing_4dp"
+        android:text="Đang bán"
+        app:layout_constraintBottom_toBottomOf="@id/imgSell"
+        app:layout_constraintEnd_toEndOf="@id/imgSell"
+        app:layout_constraintStart_toStartOf="@id/imgSell"
+        app:layout_constraintTop_toTopOf="@id/imgSell" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctlInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_14dp"
+        app:layout_constraintStart_toStartOf="@id/ivProjectList"
+        app:layout_constraintTop_toBottomOf="@id/ivProjectList">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/vTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            tools:text="@string/text_find_name_project_list"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/color_241f1f"
+            android:textSize="@dimen/text_18sp"
+            app:layout_constraintStart_toStartOf="@id/ctlInformation"
+            app:layout_constraintTop_toTopOf="@id/ctlInformation" />
+
+<!--        <vn.minerva.sale.app.util.view.custom_rating_bar.CustomRatingBar-->
+<!--            android:id="@+id/vRating"-->
+<!--            style="?android:attr/ratingBarStyleSmall"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/vTitle"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@id/vTitle" />-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivProjectListLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location_blue"
+            app:layout_constraintBottom_toBottomOf="@id/tvProjectListAddress"
+            app:layout_constraintStart_toStartOf="@id/ctlInformation"
+            app:layout_constraintTop_toTopOf="@id/tvProjectListAddress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProjectListAddress"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/spacing_5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            tools:text="50-56 Nguyễn Thị Minh Khai, phường Nguyễn Cư Trinh, Q…"
+            style="@style/StyleTextView.Normal.404B69"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivProjectListLocation"
+            app:layout_constraintTop_toBottomOf="@id/vTitle" />
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/ivProjectListAcreage"-->
+<!--            android:layout_width="@dimen/spacing_16dp"-->
+<!--            android:layout_height="@dimen/spacing_16dp"-->
+<!--            android:src="@drawable/ic_area_blue"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/tvProjectListAcreage"-->
+<!--            app:layout_constraintStart_toStartOf="@id/ctlInformation"-->
+<!--            app:layout_constraintTop_toTopOf="@id/tvProjectListAcreage" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/tvProjectListAcreage"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/spacing_6dp"-->
+<!--            android:layout_marginTop="@dimen/spacing_8dp"-->
+<!--            android:ellipsize="end"-->
+<!--            android:lines="1"-->
+<!--            android:maxLines="1"-->
+<!--            tools:text="@string/find_text_project_list"-->
+<!--            style="@style/StyleTextView.Normal.404B69"-->
+<!--            app:layout_constraintStart_toEndOf="@id/ivProjectListAcreage"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/tvProjectListAddress" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/ivProjectListClock"-->
+<!--            android:layout_width="@dimen/spacing_16dp"-->
+<!--            android:layout_height="@dimen/spacing_16dp"-->
+<!--            android:layout_marginStart="@dimen/spacing_32dp"-->
+<!--            android:src="@drawable/ic_clock_blue"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/tvProjectListTime"-->
+<!--            app:layout_constraintStart_toEndOf="@id/tvProjectListAcreage"-->
+<!--            app:layout_constraintTop_toTopOf="@id/tvProjectListTime" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/tvProjectListTime"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="2dp"-->
+<!--            android:layout_marginTop="@dimen/spacing_8dp"-->
+<!--            tools:text="@string/hint_text_project_list"-->
+<!--            style="@style/StyleTextView.Normal.404B69"-->
+<!--            app:layout_constraintStart_toEndOf="@id/ivProjectListClock"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tvProjectListAddress" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

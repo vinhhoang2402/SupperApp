@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@drawable/ic_user_default"
+        android:id="@+id/imgUser"
+        android:layout_width="@dimen/spacing_106dp"
+        android:layout_height="@dimen/spacing_106dp"
+        android:layout_marginTop="@dimen/spacing_14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="gone"
+        android:paddingEnd="@dimen/spacing_34dp"
+        android:paddingStart="@dimen/spacing_34dp"
+        android:layout_marginTop="@dimen/spacing_12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAllCaps="false"
+        android:id="@+id/btnLogin"
+        android:fontFamily="@font/roboto_medium"
+        style="@style/StyleTextViewMedium.MediumLarge.White"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/spacing_40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_rectangle_6d30ab_844fb9_6d30ab"
+        android:text="@string/text_login_register"/>
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/clLoginRegister"-->
+<!--        android:layout_width="@dimen/spacing_234dp"-->
+<!--        android:layout_height="@dimen/spacing_40dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="@dimen/spacing_12dp"-->
+<!--        android:background="@drawable/bg_rectangle_6d30ab_844fb9_6d30ab"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/imgUser">-->
+
+<!--        <TextView-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/btnLogin"-->
+<!--            style="@style/StyleTextViewMedium.MediumLarge.White"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:fontFamily="@font/roboto_medium"-->
+<!--            android:text="@string/text_bt_login_register"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/vDivider"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/vDivider"-->
+<!--            android:layout_width="1dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_marginTop="@dimen/spacing_10dp"-->
+<!--            android:layout_marginBottom="@dimen/spacing_6dp"-->
+<!--            android:layout_marginStart="@dimen/spacing_10dp"-->
+<!--            android:background="@color/white"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/btnLogin"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@id/btnLogin" />-->
+
+<!--        <TextView-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:id="@+id/btnRegister"-->
+<!--            style="@style/StyleTextViewMedium.MediumLarge.White"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:gravity="center"-->
+<!--            android:fontFamily="@font/roboto_medium"-->
+<!--            android:text="@string/text_bt_register_sale_contact"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@id/vDivider"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <TextView
+        android:id="@+id/tvNameAccount"
+        style="@style/StyleTextView.Normal.Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_10dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgUser"
+        tools:text="Xin chào, Anh Nguyễn !" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

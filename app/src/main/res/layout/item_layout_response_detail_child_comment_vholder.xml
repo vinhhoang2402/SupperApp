@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f0f1f4">
+
+    <View
+        android:background="#d4d4d8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/viewTop"
+        android:layout_width="0dp"
+        android:layout_height="1dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginStart="@dimen/spacing_40dp"
+        android:layout_marginEnd="@dimen/spacing_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/spacing_10dp"
+        android:paddingBottom="@dimen/spacing_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="@dimen/spacing_40dp"
+                android:layout_height="@dimen/spacing_40dp"
+                android:src="@color/color_a7a1a1"
+                app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                style="@style/StyleTextView.Medium.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_12dp"
+                android:layout_marginTop="@dimen/spacing_16dp"
+                android:layout_marginEnd="@dimen/spacing_10dp"
+                android:fontFamily="@font/roboto_medium"
+                app:layout_constraintEnd_toStartOf="@id/imgLike"
+                app:layout_constraintStart_toEndOf="@id/imgAvatar"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Phòng sale" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgLike"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/spacing_16dp"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintBottom_toBottomOf="@id/tvName"
+                app:layout_constraintEnd_toStartOf="@id/imgDisLike"
+                app:layout_constraintTop_toTopOf="@id/tvName"
+                app:srcCompat="@drawable/ic_like_default" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgDisLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/spacing_6dp"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintBottom_toBottomOf="@id/tvName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvName"
+                app:srcCompat="@drawable/ic_dislike" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toTopOf="@id/tvDate"
+                app:srcCompat="@drawable/ic_time_purple" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                style="@style/StyleTextView.Small.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_6dp"
+                android:layout_marginTop="@dimen/spacing_6dp"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toEndOf="@id/imgDate"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                tools:text="9:00 - 24/02/2020" />
+
+            <View
+                android:id="@+id/viewCenter"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/spacing_14dp"
+                android:background="@color/color_ebe0f6"
+                app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                app:layout_constraintStart_toEndOf="@id/tvDate"
+                app:layout_constraintTop_toTopOf="@id/tvDate" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/spacing_14dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                app:layout_constraintStart_toEndOf="@id/viewCenter"
+                app:layout_constraintTop_toTopOf="@id/tvDate"
+                app:srcCompat="@drawable/ic_comment_response" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvComment"
+                style="@style/StyleTextView.Small.6D30AB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_6dp"
+                android:layout_marginTop="@dimen/spacing_6dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/text_discuss"
+                app:layout_constraintStart_toEndOf="@id/imgComment"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvDescription"
+            style="@style/StyleTextView.Normal.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_14dp"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingEnd="@dimen/spacing_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clTop"
+            tools:text="Cảm ơn bạn rất nhiều,đã quan tâm đến dự án căn hộ của VTP chúng tôi, hiện tại dự án đang được bán tại các chi nhánh chính và đại lý liên doanh với chúng tôi. Cụ thể đại lý 203 đường 2/3,phường 10, quận 10, Tp.HCM " />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

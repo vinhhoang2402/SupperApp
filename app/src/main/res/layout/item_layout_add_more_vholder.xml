@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvAddMore"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAddMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/spacing_4dp"
+        android:paddingBottom="@dimen/spacing_8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/clAdd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/spacing_8dp"
+            android:layout_marginEnd="@dimen/spacing_8dp"
+            android:padding="@dimen/spacing_6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clRemove">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAddSpend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_icon_feather_plus_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddSpend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10dp"
+                android:layout_marginEnd="@dimen/spacing_8dp"
+                android:text="@string/text_add_spend"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/text_14sp"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintTop_toTopOf="@+id/ivAddSpend"
+                app:layout_constraintBottom_toBottomOf="@+id/ivAddSpend"
+                app:layout_constraintStart_toEndOf="@+id/ivAddSpend" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRemove"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginEnd="@dimen/spacing_8dp"
+            android:padding="@dimen/spacing_6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRemoveOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_4dp"
+                android:layout_marginEnd="@dimen/spacing_10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRemoveOther"
+                app:layout_constraintEnd_toStartOf="@id/tvRemoveOther"
+                app:layout_constraintTop_toTopOf="@+id/tvRemoveOther"
+                app:srcCompat="@drawable/ic_icon_remove_collateral" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRemoveOther"
+                style="@style/StyleTextView.Normal.E94C4C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_remove_collateral_loan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

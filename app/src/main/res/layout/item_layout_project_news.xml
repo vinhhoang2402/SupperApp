@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="?attr/selectableItemBackground"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="@dimen/spacing_20dp"
+    android:paddingEnd="@dimen/spacing_20dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/imgProjectNews"
+        app:srcCompat="@drawable/img_project_news"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="99dp"
+        android:layout_height="85dp"/>
+    <TextView
+        style="@style/StyleTextView.Medium.Black"
+        android:fontFamily="@font/roboto_regular"
+        android:id="@+id/tvTitleNews"
+        android:paddingStart="@dimen/spacing_18dp"
+        tools:text="Bỏ tiền tỷ mua bất động sản, nhà đầu tư làm thế nào để tránh được rủi ro ở thời điểm thị trường lao d…"
+        app:layout_constraintStart_toEndOf="@id/imgProjectNews"
+        app:layout_constraintTop_toTopOf="@id/imgProjectNews"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="@dimen/spacing_12dp"
+        android:id="@+id/iconTimeNews"
+        app:srcCompat="@drawable/ic_time_purple"
+        android:paddingStart="@dimen/spacing_18dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleNews"
+        app:layout_constraintStart_toEndOf="@id/imgProjectNews"
+        app:layout_constraintBottom_toBottomOf="@id/imgProjectNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        style="@style/StyleTextView.Small.AAAAAA"
+        android:fontFamily="@font/roboto_medium"
+        tools:text="9:00 - 27/02/2020"
+        android:paddingStart="@dimen/spacing_10dp"
+        android:id="@+id/tvTimeNews"
+        app:layout_constraintBottom_toBottomOf="@id/iconTimeNews"
+        app:layout_constraintTop_toTopOf="@id/iconTimeNews"
+        app:layout_constraintStart_toEndOf="@id/iconTimeNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

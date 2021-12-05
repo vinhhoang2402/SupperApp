@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rectange_c4_ffffff">
+
+    <View
+        android:id="@+id/vDrag"
+        android:layout_width="74dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="@dimen/spacing_8dp"
+        android:background="@color/color_9167f1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCancel"
+        style="@style/StyleTextView.MediumLarge.696969"
+        android:layout_marginStart="@dimen/spacing_14dp"
+        android:background="?attr/selectableItemBackground"
+        android:fontFamily="@font/roboto_regular"
+        android:padding="@dimen/spacing_12dp"
+        android:text="@string/text_cancel"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFinish"
+        style="@style/StyleTextViewMedium.MediumLarge.6D30AB"
+        android:layout_marginEnd="@dimen/spacing_14dp"
+        android:background="?attr/selectableItemBackground"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="@dimen/spacing_12dp"
+        android:text="@string/text_done"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:singleLine="true"
+        android:id="@+id/tvTitle"
+        style="@style/StyleTextViewMedium.SuperLarge.Black"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="@dimen/spacing_12dp"
+        android:text="Xem phối cảnh"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/tvFinish"
+        app:layout_constraintStart_toEndOf="@id/tvCancel"
+        app:layout_constraintTop_toBottomOf="@id/vDrag" />
+
+    <View
+        android:id="@+id/vDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_2dp"
+        android:layout_marginStart="@dimen/spacing_20dp"
+        android:layout_marginEnd="@dimen/spacing_20dp"
+        android:background="@color/color_878787"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        style="@style/MyCustomScrollBar"
+        android:scrollbars="vertical"
+        android:id="@+id/rvChooseType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/spacing_40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDivider"
+        app:layout_constraintVertical_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

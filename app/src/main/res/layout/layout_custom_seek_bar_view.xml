@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kosmos="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/color_aaaaaa"
+        android:textSize="@dimen/text_14sp"
+        kosmos:layout_constraintEnd_toEndOf="parent"
+        kosmos:layout_constraintHorizontal_bias="0"
+        kosmos:layout_constraintStart_toStartOf="parent"
+        kosmos:layout_constraintTop_toTopOf="parent"
+        tools:text="1 Nam" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/color_aaaaaa"
+        android:textSize="@dimen/text_14sp"
+        kosmos:layout_constraintEnd_toEndOf="parent"
+        kosmos:layout_constraintHorizontal_bias="1"
+        kosmos:layout_constraintStart_toStartOf="parent"
+        kosmos:layout_constraintTop_toTopOf="parent"
+        tools:text="1 Nam" />
+
+
+    <vn.minerva.sale.app.util.view.custom_seekbar.KBubbleSeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        kosmos:bsb_bubble_color="#6d30ab"
+        kosmos:bsb_colors="#4a3bcc_#5B36BC_#6d30ab"
+        kosmos:bsb_hide_bubble="true"
+        kosmos:bsb_show_section_mark="false"
+        kosmos:bsb_thumb_color="@color/color_f6f2ff"
+        kosmos:bsb_touch_to_seek="true"
+        kosmos:bsb_track_color="#e4e4e4"
+        kosmos:bsb_track_size="12dp"
+        kosmos:layout_constraintEnd_toEndOf="parent"
+        kosmos:layout_constraintStart_toStartOf="parent"
+        kosmos:layout_constraintTop_toBottomOf="@id/tvStart" />
+
+    <LinearLayout
+        android:id="@+id/llInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        kosmos:layout_constraintEnd_toEndOf="parent"
+        kosmos:layout_constraintStart_toStartOf="parent"
+        kosmos:layout_constraintTop_toBottomOf="@id/seekBar">
+
+        <View
+            android:id="@+id/arrow"
+            android:layout_width="16dp"
+            android:layout_height="10dp"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/triangle_shape"
+            android:rotation="180" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_f6f2ff"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="2dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="#6d30ab"
+            android:textSize="@dimen/text_14sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

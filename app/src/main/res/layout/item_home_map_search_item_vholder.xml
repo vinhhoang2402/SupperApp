@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llItemSearch"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/spacing_16dp"
+    android:paddingEnd="@dimen/spacing_16dp">
+
+    <View
+        android:id="@+id/vLine"
+        style="@style/StyleLine"
+        android:layout_width="match_parent" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        style="@style/StyleTextView.Normal"
+        android:textColor="@color/black_text_454545"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/spacing_15dp"
+        android:layout_marginBottom="@dimen/spacing_15dp"
+        tools:text="Royal Garden" />
+
+</LinearLayout>

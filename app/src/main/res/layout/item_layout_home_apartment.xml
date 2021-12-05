@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/spacing_8dp"
+    android:padding="@dimen/spacing_8dp"
+    android:background="?attr/selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvImage"
+        android:layout_width="175dp"
+        android:layout_height="127dp"
+        app:cardCornerRadius="@dimen/spacing_6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/imgApartment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgHobby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_9dp"
+                android:layout_marginEnd="@dimen/spacing_9dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_heart_purple_line" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvProjectName"
+        style="@style/StyleTextView.MediumLarge.6D30AB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_12dp"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvImage"
+        tools:text="Royal Garden" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        style="@style/StyleTextView.SupperSmall.AAAAAA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_2dp"
+        android:fontFamily="@font/roboto_italic"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectName"
+        tools:text="Chung cư cao cấp | Trung tâm thương…" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvAreaTotal"
+        app:layout_constraintStart_toStartOf="@+id/imgTime"
+        app:layout_constraintEnd_toEndOf="@+id/imgTime"
+        app:layout_constraintTop_toTopOf="@id/tvAreaTotal"
+        app:srcCompat="@drawable/ic_area_white" />
+
+    <TextView
+        android:id="@+id/tvAreaTotal"
+        style="@style/StyleTextView.Normal.404B69"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8dp"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvContent"
+        tools:text="Quận 7, TPHCM" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPrice"
+        app:srcCompat="@drawable/ic_apartment_payment" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        style="@style/StyleTextView.Normal.404B69"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_10dp"
+        android:layout_marginTop="@dimen/spacing_4dp"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgTime"
+        app:layout_constraintTop_toBottomOf="@id/tvAreaTotal"
+        tools:text="Quý 4/2020" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

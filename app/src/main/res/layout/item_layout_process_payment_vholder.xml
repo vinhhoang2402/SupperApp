@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="0dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/spacing_20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgStatus"
+            android:layout_width="@dimen/spacing_22dp"
+            android:layout_height="@dimen/spacing_22dp"
+            android:layout_marginStart="@dimen/spacing_28dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvStep"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvStep"
+            app:srcCompat="@drawable/ic_status_finish" />
+
+        <TextView
+            android:id="@+id/tvStep"
+            style="@style/StyleTextView.Normal.6D30AB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_24dp"
+            android:layout_marginTop="@dimen/spacing_16dp"
+            android:fontFamily="@font/roboto_bold"
+            app:layout_constraintEnd_toStartOf="@id/tvPrice"
+            app:layout_constraintStart_toEndOf="@id/imgStatus"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tiền cọc" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            style="@style/StyleTextView.Normal.6D30AB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_16dp"
+            android:layout_marginEnd="@dimen/spacing_14dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvStep"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="100.000.000" />
+
+        <TextView
+            android:id="@+id/tvUnit"
+            style="@style/StyleTextView.Small.6D30AB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingStart="@dimen/spacing_10dp"
+            android:text="đ"
+            app:layout_constraintBottom_toTopOf="@id/tvPrice"
+            app:layout_constraintEnd_toEndOf="@id/tvPrice"
+            app:layout_constraintStart_toEndOf="@id/tvPrice"
+            app:layout_constraintTop_toTopOf="@id/tvPrice" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            style="@style/StyleTextView.Small.27CC5A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toBottomOf="@id/tvDate"
+            app:layout_constraintEnd_toEndOf="@id/imgStatus"
+            app:layout_constraintStart_toStartOf="@id/imgStatus"
+            app:layout_constraintTop_toTopOf="@id/tvDate"
+            tools:text="Đúng hẹn" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgDate"
+            android:layout_width="@dimen/spacing_14dp"
+            android:layout_height="@dimen/spacing_14dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvDate"
+            app:layout_constraintEnd_toStartOf="@id/tvDate"
+            app:layout_constraintStart_toStartOf="@id/tvStep"
+            app:layout_constraintTop_toTopOf="@id/tvDate"
+            app:srcCompat="@drawable/ic_calendar_black_14" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            style="@style/StyleTextView.Normal.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_6dp"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintStart_toEndOf="@id/imgDate"
+            app:layout_constraintTop_toBottomOf="@id/tvStep"
+            tools:text="01/03/2020" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgNotify"
+            android:layout_width="@dimen/spacing_14dp"
+            android:layout_height="@dimen/spacing_14dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvDate"
+            app:layout_constraintEnd_toEndOf="@id/tvPrice"
+            app:layout_constraintTop_toTopOf="@id/tvDate"
+            app:srcCompat="@drawable/ic_notification_blue" />
+
+        <View
+            android:id="@+id/viewBottom"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/spacing_12dp"
+            android:background="@color/color_d6d3d3"
+            app:layout_constraintEnd_toEndOf="@id/tvPrice"
+            app:layout_constraintStart_toStartOf="@id/tvStep"
+            app:layout_constraintTop_toBottomOf="@id/tvDate" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

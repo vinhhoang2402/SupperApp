@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/llTypeProject"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/spacing_14dp"
+    android:background="@drawable/bg_rectangle_c4_ffffff_stroke_a4a4a4"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTypeProject"
+        style="@style/StyleTextView.Normal.Silver"
+        android:background="?attr/selectableItemBackground"
+        android:paddingStart="@dimen/spacing_12dp"
+        android:paddingTop="@dimen/spacing_6dp"
+        android:paddingEnd="@dimen/spacing_12dp"
+        android:paddingBottom="@dimen/spacing_6dp"
+        android:text="@string/text_status_finish" />
+</LinearLayout>

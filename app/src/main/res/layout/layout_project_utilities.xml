@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mapbox_renderTextureMode="true" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_158sdp"
+            android:background="@drawable/bg_rectange_00241f1f_241f1f" />
+    </FrameLayout>
+
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/view_layout_toolbar_project_home"
+        app:layout_constraintEnd_toEndOf="@id/mapView"
+        app:layout_constraintStart_toStartOf="@id/mapView"
+        app:layout_constraintTop_toTopOf="@id/mapView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

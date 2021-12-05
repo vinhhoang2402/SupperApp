@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/spacing_234dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/spacing_8dp"
+    android:layout_marginEnd="@dimen/spacing_8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/vTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_12dp"
+        android:visibility="visible"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rectange_c4_ffffff"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.56">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImage"
+            android:layout_width="@dimen/spacing_72dp"
+            android:layout_height="@dimen/spacing_92dp"
+            android:layout_marginStart="@dimen/spacing_10dp"
+            android:layout_marginTop="@dimen/spacing_12dp"
+            android:layout_marginBottom="@dimen/spacing_12dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/imgProject"
+                android:layout_width="@dimen/spacing_72dp"
+                android:layout_height="@dimen/spacing_92dp"
+                android:layout_margin="-4dp"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocationTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/roboto_bold"
+            android:textColor="@color/color_241f1f"
+            android:textSize="@dimen/text_14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="Trường tiểu học Nguyễn Thái Sơn"
+            android:layout_marginStart="@dimen/spacing_10dp"
+            app:layout_constraintStart_toEndOf="@id/cvImage"
+            app:layout_constraintTop_toTopOf="@id/cvImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocationDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/roboto_regular"
+            android:textColor="@color/color_696969"
+            android:textSize="@dimen/text_12sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="@string/text_distance_met"
+            android:layout_marginTop="@dimen/spacing_6dp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/tvLocationTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvLocationTitle"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocationAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/roboto_regular"
+            android:textColor="@color/color_696969"
+            android:textSize="@dimen/text_12sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="19 Đường Nguyễn Hữu Thọ, P. Tân Hưng, Quận 7 asdfa sdf as"
+            android:layout_marginTop="@dimen/spacing_6dp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/tvLocationTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvLocationDistance"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/vBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_12dp"
+        android:visibility="visible"/>
+    
+</LinearLayout>

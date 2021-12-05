@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_12dp"
+    android:paddingStart="@dimen/spacing_20dp"
+    android:paddingTop="@dimen/spacing_10dp"
+    android:paddingEnd="@dimen/spacing_20dp">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_12dp"
+        android:background="@color/color_e8e8e8"
+        app:layout_constraintEnd_toEndOf="@id/cvRight"
+        app:layout_constraintStart_toStartOf="@id/cvLeft"
+        app:layout_constraintTop_toBottomOf="@id/cvLeft" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rectangle_82a1ff_4d69ff">
+
+            <TextView
+                android:id="@+id/tvTitleProject"
+                style="@style/StyleTextView.Normal.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/spacing_16dp"
+                android:paddingTop="@dimen/spacing_14dp"
+                android:text="@string/text_project"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProject"
+                style="@style/StyleTextView.Medium.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingStart="@dimen/spacing_16dp"
+                android:paddingTop="@dimen/spacing_4dp"
+                android:paddingBottom="@dimen/spacing_14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleProject"
+                tools:text="Royal Riverside Garden " />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_company"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLeft"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_12dp"
+        android:layout_marginEnd="@dimen/spacing_6dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toStartOf="@id/glCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvTop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rectangle_92e2a8_15c14a">
+
+            <TextView
+                android:id="@+id/tvTitleTotalMoney"
+                style="@style/StyleTextView.Normal.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/spacing_16dp"
+                android:paddingTop="@dimen/spacing_14dp"
+                android:text="@string/text_title_total_money"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTotalMoney"
+                style="@style/StyleTextView.Medium.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingStart="@dimen/spacing_16dp"
+                android:paddingTop="@dimen/spacing_4dp"
+                android:paddingBottom="@dimen/spacing_14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleTotalMoney"
+                tools:text="13.000.000.000" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgTotalMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_money_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_6dp"
+        android:layout_marginTop="@dimen/spacing_12dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glCenter"
+        app:layout_constraintTop_toBottomOf="@id/cvTop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rectangle_fc8b44_ffb07e">
+
+            <TextView
+                android:id="@+id/tvTitlePayment"
+                style="@style/StyleTextView.Normal.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/spacing_16dp"
+                android:paddingTop="@dimen/spacing_14dp"
+                android:text="@string/text_step_payment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPayment"
+                style="@style/StyleTextView.Medium.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingStart="@dimen/spacing_16dp"
+                android:paddingTop="@dimen/spacing_4dp"
+                android:paddingBottom="@dimen/spacing_14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitlePayment"
+                tools:text="15 đợt " />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_payment_times"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintEnterEmail"
+    android:padding="@dimen/spacing_20dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvRegister"
+        app:srcCompat="@drawable/ic_back_black" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        style="@style/StyleTextView.LowHuge.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_15dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/text_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivBack"
+        app:layout_constraintTop_toBottomOf="@id/glTop" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        style="@style/StyleTextView.Medium.404B69"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/text_enter_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRegister" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/edtEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edtEmail"
+        app:srcCompat="@drawable/ic_email" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
+        android:fontFamily="@font/roboto_bold"
+        android:background="?attr/selectableItemBackground"
+        android:id="@+id/edtEmail"
+        style="@style/StyleTextView.Medium.404B69"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_72dp"
+        android:hint="@string/text_email_hint_star"
+        android:paddingStart="@dimen/spacing_14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivEmail"
+        app:layout_constraintTop_toBottomOf="@id/tvContent" />
+
+    <View
+        android:layout_marginTop="@dimen/spacing_8dp"
+        android:id="@+id/viewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtEmail" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/spacing_8dp"
+        android:text="@string/text_email_error"
+        style="@style/StyleTextView.Normal.EE403F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewBottom"
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        style="@style/StyleTextView.MediumLarge.White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_24dp"
+        android:background="@drawable/bg_rectangle_6d30ab_844fb9_6d30ab"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/text_next_step"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvError" />
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/btnNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tvLogin"
+            style="@style/StyleTextView.Medium.Purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_login_from_register" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tvLogin"
+            app:layout_constraintStart_toEndOf="@id/tvLogin"
+            app:layout_constraintTop_toTopOf="@id/tvLogin"
+            app:srcCompat="@drawable/ic_navigate_next_black_24dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

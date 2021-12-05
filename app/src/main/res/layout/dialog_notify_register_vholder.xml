@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintParent"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/spacing_20dp"
+    android:paddingStart="@dimen/spacing_20dp"
+    android:paddingEnd="@dimen/spacing_20dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingBottom="@dimen/spacing_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_40dp"
+        android:background="@drawable/bg_rectangle_white_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvNotify"
+            style="@style/StyleTextView.Medium.404B69"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_56dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:paddingStart="@dimen/spacing_30dp"
+            android:paddingEnd="@dimen/spacing_30dp"
+            android:text="@string/text_notify_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnReturn"
+            style="@style/StyleTextView.MediumLarge.Purple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/spacing_15dp"
+            android:layout_marginTop="@dimen/spacing_24dp"
+            android:layout_marginEnd="@dimen/spacing_15dp"
+            android:background="@drawable/bg_button_logout_selector"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/text_return_project"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNotify" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgTop"
+        android:layout_width="@dimen/spacing_92dp"
+        android:layout_height="@dimen/spacing_92dp"
+        android:src="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTop"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/ic_call_red"
+        app:layout_constraintBottom_toBottomOf="@id/imgTop"
+        app:layout_constraintEnd_toEndOf="@id/imgTop"
+        app:layout_constraintStart_toStartOf="@id/imgTop"
+        app:layout_constraintTop_toTopOf="@id/imgTop" />
+</androidx.constraintlayout.widget.ConstraintLayout>

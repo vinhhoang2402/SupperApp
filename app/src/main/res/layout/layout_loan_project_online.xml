@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llContainer"
+    android:background="@color/color_eeedf2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/view_layout_toolbar_project_home" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_a7a1a1"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/clProjectHeader"
+                layout="@layout/item_layout_loan_project_online_header_vholder"/>
+
+            <FrameLayout
+                android:id="@+id/frmLoanOnline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_16dp"
+                android:layout_marginTop="@dimen/spacing_16dp"
+                android:layout_marginEnd="@dimen/spacing_16dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_16dp"
+                android:layout_marginTop="@dimen/spacing_10dp"
+                android:layout_marginEnd="@dimen/spacing_16dp"
+                android:paddingBottom="@dimen/spacing_40dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_save_info"
+                    app:layout_constraintBottom_toBottomOf="@id/swSaveInfo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/swSaveInfo" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swSaveInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:thumb="@drawable/ic_dot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:track="@drawable/bg_switch_on_off" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
+                    style="@style/StyleTextViewMedium.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_40dp"
+                    android:background="@drawable/bg_button_logout_selector"
+                    android:text="@string/text_cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_6d30ab"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/swSaveInfo" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnContinue"
+                    style="@style/StyleTextViewMedium.Medium.White"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_10dp"
+                    android:background="@drawable/bg_rectangle_6d30ab_844fb9_6d30ab"
+                    android:text="@string/text_continue"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnCancel" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

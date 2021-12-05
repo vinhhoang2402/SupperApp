@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_home_purple"
+        android:title="Home"/>
+    <item
+        android:id="@+id/action_project"
+        android:icon="@drawable/ic_project_gray"
+        android:title="Project"/>
+    <item
+        android:id="@+id/action_trading"
+        android:icon="@drawable/ic_trading_gray"
+        android:title="Trading"/>
+    <item
+        android:id="@+id/action_sale"
+        android:icon="@drawable/ic_news_gray"
+        android:title="News"/>
+    <item
+        android:id="@+id/action_account"
+        android:icon="@drawable/ic_user_blue"
+        android:title="Account"/>
+</menu>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/layout_toolbar_discover" />
+
+    <FrameLayout
+        android:id="@+id/flChange"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_6dp"
+        app:layout_constraintBottom_toTopOf="@id/cvBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardElevation="10dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/spacing_20dp"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:layout_marginEnd="@dimen/spacing_20dp"
+            android:layout_marginBottom="@dimen/spacing_12dp"
+            android:background="@drawable/bg_rectangle_6d30ab_844fb9_6d30ab">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnProcessPayment"
+                style="@style/StyleTextViewMedium.Medium.White"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_50dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:text="@string/text_process_pay"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

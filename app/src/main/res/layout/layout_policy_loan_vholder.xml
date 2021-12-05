@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flChangeToLoanOnline"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llPolicyLoan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_eeedef"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_loan"
+            layout="@layout/view_layout_toolbar_project_home" />
+
+        <View
+            android:id="@+id/vTop"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_a7a1a1" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_eeedef"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/clPolicyLoanHeader"
+                    layout="@layout/item_layout_policy_loan_header_vholder" />
+
+                <FrameLayout
+                    android:id="@+id/flPolicyLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_30dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnContactBuy"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_40dp"
+                        android:layout_marginLeft="@dimen/spacing_16dp"
+                        android:layout_marginRight="@dimen/spacing_16dp"
+                        android:background="@drawable/bg_rectangle_c4_ffffff_stroke_6d30ab"
+                        android:fontFamily="@font/roboto_medium"
+                        android:inputType="textCapSentences"
+                        android:text="@string/hint_polity_btn_contact_buy"
+                        android:textColor="@color/color_6d30ab"
+                        android:textSize="@dimen/spacing_16dp"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnBooking"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_40dp"
+                        android:layout_marginLeft="@dimen/spacing_16dp"
+                        android:layout_marginTop="@dimen/spacing_10dp"
+                        android:layout_marginRight="@dimen/spacing_16dp"
+                        android:background="@drawable/bg_rectangle_c4_ffffff_stroke_6d30ab"
+                        android:fontFamily="@font/roboto_medium"
+                        android:inputType="textCapSentences"
+                        android:text="@string/hint_polity_btn_booking"
+                        android:textColor="@color/color_6d30ab"
+                        android:textSize="@dimen/spacing_16dp"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLoan"
+                        style="@style/StyleTextViewMedium.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_40dp"
+                        android:layout_marginStart="@dimen/spacing_16dp"
+                        android:layout_marginTop="@dimen/spacing_10dp"
+                        android:layout_marginEnd="@dimen/spacing_16dp"
+                        android:layout_marginBottom="@dimen/spacing_30dp"
+                        android:background="@drawable/bg_rectange_c4_6d30ab"
+                        android:text="@string/text_next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

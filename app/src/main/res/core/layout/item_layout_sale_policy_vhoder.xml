@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_24dp"
+    android:layout_marginEnd="@dimen/spacing_36dp"
+    android:background="@color/color_transparent">
+
+    <LinearLayout
+        android:id="@+id/llSalePolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_transparent"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/spacing_32dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_transparent">
+
+            <View
+                android:id="@+id/viewNormal"
+                android:layout_width="@dimen/spacing_4dp"
+                android:layout_height="@dimen/spacing_16dp"
+                android:background="@color/purple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/iv_Doc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/spacing_4dp"
+                app:cardCornerRadius="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewNormal"
+                app:cardElevation="6dp">
+                <View
+                    android:layout_width="@dimen/spacing_14dp"
+                    android:layout_height="@dimen/spacing_14dp"
+                    android:background="@drawable/bg_circle_6d30ab_6d31ad_4a3bcc" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPercent"
+                style="@style/StyleTextView.Small.E94C4C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_2dp"
+                android:layout_marginBottom="@dimen/spacing_2dp"
+                android:text="100%"
+                android:fontFamily="@font/roboto_medium"
+                app:layout_constraintEnd_toEndOf="@id/iv_Doc"
+                app:layout_constraintStart_toStartOf="@id/iv_Doc"
+                app:layout_constraintTop_toBottomOf="@id/iv_Doc" />
+
+            <View
+                android:id="@+id/viewCenter"
+                android:layout_width="@dimen/spacing_4dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/spacing_4dp"
+                android:layout_marginBottom="@dimen/spacing_20dp"
+                android:background="@color/purple"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPercent" />
+
+            <View
+                android:id="@+id/viewLast"
+                android:layout_width="@dimen/spacing_4dp"
+                android:layout_height="@dimen/spacing_20dp"
+                android:background="@color/purple"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewCenter" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <vn.minerva.sale.app.util.view.bubble_layout.BubbleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_10dp"
+            android:layout_marginBottom="@dimen/spacing_20dp"
+            android:background="@color/color_transparent"
+            app:bl_arrowHeight="@dimen/spacing_20dp"
+            app:bl_arrowPosition="@dimen/spacing_16dp"
+            app:bl_arrowWidth="@dimen/spacing_10dp"
+            app:bl_cornersRadius="6dp"
+            app:bl_strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/spacing_14dp"
+                android:background="@color/color_transparent">
+
+                <TextView
+                    android:id="@+id/tvTitleDeposit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_10dp"
+                    android:layout_marginTop="@dimen/spacing_18dp"
+                    android:text="@string/find_text_tien_coc"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/text_20sp"
+                    android:fontFamily="@font/roboto_bold"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDepositPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_4dp"
+                    android:layout_marginTop="@dimen/spacing_18dp"
+                    android:text="@string/text_percent"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/text_20sp"
+                    style="@style/StyleTextView.Large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/tvTitleDeposit"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvIsPromotion"
+                    style="@style/StyleTextViewMedium.Medium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_18dp"
+                    android:layout_marginStart="@dimen/spacing_24dp"
+                    android:text="@string/text_promotion"
+                    android:textColor="@color/color_ee403f"
+                    android:fontFamily="@font/roboto_light_italic"
+                    android:textSize="@dimen/text_18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/tvDepositPercent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_10dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/find_text_350_000_000_vnd"
+                    android:textColor="@color/color_6d30ab"
+                    android:textSize="@dimen/text_20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleDeposit" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivDevelop"
+                    android:layout_width="@dimen/spacing_6dp"
+                    android:layout_height="@dimen/spacing_6dp"
+                    android:layout_marginStart="@dimen/spacing_10dp"
+                    android:src="@color/color_9a9a9a"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTitleDevelop"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvTitleDevelop" />
+
+                <TextView
+                    android:id="@+id/tvTitleDevelop"
+                    style="@style/StyleTextView.Normal.AAAAAA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_5dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:text="@string/find_text_tien_do"
+                    android:fontFamily="@font/roboto_italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/ivDevelop"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/tvDevelop"
+                    style="@style/StyleTextView.Normal.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_5dp"
+                    android:text="@string/find_text_10_ngay_sau_coc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/tvTitleDevelop"
+                    app:layout_constraintTop_toTopOf="@id/tvTitleDevelop" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:src="@color/color_9a9a9a"
+                    android:id="@+id/ivMoneyPaid"
+                    android:layout_width="@dimen/spacing_6dp"
+                    android:layout_height="@dimen/spacing_6dp"
+                    android:layout_marginStart="@dimen/spacing_10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTitleMoneyPaid"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvTitleMoneyPaid" />
+
+                <TextView
+                    android:id="@+id/tvTitleMoneyPaid"
+                    style="@style/StyleTextView.Normal.AAAAAA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_5dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:text="@string/find_text_tien_da_thanh_toan"
+                    android:fontFamily="@font/roboto_italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/ivMoneyPaid"
+                    app:layout_constraintTop_toBottomOf="@id/tvDevelop" />
+
+                <TextView
+                    android:id="@+id/tvMoneyPaid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_5dp"
+                    android:text="@string/find_text_450"
+                    style="@style/StyleTextView.Normal.Black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/tvTitleMoneyPaid"
+                    app:layout_constraintTop_toTopOf="@id/tvTitleMoneyPaid" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/spacing_6dp"
+                    android:layout_height="@dimen/spacing_6dp"
+                    android:layout_marginStart="@dimen/spacing_10dp"
+                    android:src="@color/color_9a9a9a"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivTitleNote"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivTitleNote" />
+
+                <TextView
+                    android:id="@+id/ivTitleNote"
+                    style="@style/StyleTextView.Normal.AAAAAA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_5dp"
+                    android:layout_marginTop="@dimen/spacing_5dp"
+                    android:layout_marginBottom="@dimen/spacing_14dp"
+                    android:text="@string/find_text_title_note"
+                    android:fontFamily="@font/roboto_italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivMoneyPaid"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleMoneyPaid" />
+
+                <TextView
+
+                    android:id="@+id/tvNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_5dp"
+                    android:text="@string/find_text_note"
+                    style="@style/StyleTextView.Normal.Black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivTitleNote"
+                    app:layout_constraintTop_toTopOf="@id/ivTitleNote" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </vn.minerva.sale.app.util.view.bubble_layout.BubbleLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMoveDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/spacing_30dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMoveDown"
+            style="@style/StyleTextView.Medium.404B69"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_12dp"
+            android:text="@string/find_text_xem_them"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMove1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4dp"
+            android:src="@drawable/ic_double_angle_pointing_to_bottom"
+            app:layout_constraintEnd_toEndOf="@id/tvMoveDown"
+            app:layout_constraintStart_toStartOf="@id/tvMoveDown"
+            app:layout_constraintTop_toBottomOf="@id/tvMoveDown" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

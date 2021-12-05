@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="c_g_app_text_primary">@color/colorPrimary</color>
+    <color name="orange_text">#f87f4e</color>
+    <color name="orange_text_dark">#F36D37</color>
+    <color name="blue_text">#404b69</color>
+    <color name="black_text">#241f1f</color>
+    <color name="black_text_333333">#333333</color>
+    <color name="silver_text">#828282</color>
+    <color name="black">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="text_bottom_color_grey">#989898</color>
+    <color name="black_opacity">#B0221E1E</color>
+    <color name="grey_9eabbe">#9eabbe</color>
+    <color name="light_grey">#f0f0f0</color>
+    <color name="background_project">#f3f3f8</color>
+    <color name="purple_light">#dad2ff</color>
+    <color name="purple">#6d30ab</color>
+    <color name="gray_a7a1a1">#a7a1a1</color>
+    <color name="silver">#828282</color>
+    <color name="darkBlue">#404b69</color>
+    <color name="while_fcfcfc">#fcfcfc</color>
+    <color name="back_241f1f">#241f1f</color>
+
+</resources>

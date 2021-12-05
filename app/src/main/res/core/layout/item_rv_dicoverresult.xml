@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+    <androidx.appcompat.widget.SearchView
+        app:closeIcon="@drawable/ic_remove_search"
+        android:id="@+id/sv_discoverresult"
+        android:layout_width="@dimen/_235sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_56sdp"
+        android:background="@drawable/bg_layout_search"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="@id/glCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="@string/text_find_project" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginStart="@dimen/spacing_12dp"
+        android:id="@+id/ivDiscoverresult"
+        android:layout_width="@dimen/spacing_20dp"
+        android:layout_height="@dimen/spacing_18dp"
+        android:src="@drawable/ic_filter_black"
+        app:layout_constraintBottom_toBottomOf="@id/sv_discoverresult"
+        app:layout_constraintCircleRadius="@dimen/spacing_8dp"
+        app:layout_constraintStart_toEndOf="@id/ivDiscoverResult"
+        app:layout_constraintTop_toTopOf="@id/sv_discoverresult" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        style="@style/StyleTextViewMedium.Medium.333333"
+        android:id="@+id/ivDiscoverResult"
+        android:layout_width="@dimen/spacing_20dp"
+        android:layout_height="@dimen/spacing_18dp"
+        android:layout_marginStart="@dimen/spacing_18dp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/sv_discoverresult"
+        app:layout_constraintStart_toEndOf="@id/sv_discoverresult"
+        app:layout_constraintTop_toTopOf="@id/sv_discoverresult"
+        app:srcCompat="@drawable/ic_search_blue" />
+
+    <include
+        android:id="@+id/ivSearchFail"
+        layout="@layout/item_search_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSerchDiscover"
+        style="@style/StyleTextViewMedium.Medium.333333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:text="Tắt"
+        app:layout_constraintBottom_toBottomOf="@id/sv_discoverresult"
+        app:layout_constraintStart_toEndOf="@id/sv_discoverresult"
+        app:layout_constraintTop_toTopOf="@id/sv_discoverresult" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icBackDiscoverResultDiscover"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitleRsDiscover"
+        app:layout_constraintStart_toStartOf="@id/sv_discoverresult"
+        app:layout_constraintTop_toTopOf="@id/tvTitleRsDiscover"
+        app:srcCompat="@drawable/ic_back_black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleRsDiscover"
+        style="@style/StyleTextViewMedium.Medium.333333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_24sp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:text="Thành phố Hồ Chí Minh"
+        app:layout_constraintStart_toEndOf="@id/icBackDiscoverResultDiscover"
+        app:layout_constraintTop_toBottomOf="@id/sv_discoverresult" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleRsDiscover" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

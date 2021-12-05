@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_write_new_message"><u>Write new message</u></string>
+    <string name="text_select_image_with">Chọn ảnh theo</string>
+    <string name="text_message_sent_time">Gửi lúc %s</string>
+    <string name="text_input_message_hint">Viết tin nhắn mới …</string>
+    <string name="text_add_member">Thêm thành viên</string>
+    <string name="text_send_message">Gửi tin nhắn</string>
+    <string name="text_new_message">Tin nhắn mới</string>
+    <string name="text_project_highlight_title">Các dự án nổi bật</string>
+    <string name="text_not_open_file">Không mở được file này</string>
+    <string name="text_error_selected_images">Vui lòng chọn ít nhất 1 ảnh</string>
+    <string name="text_record">Ghi âm</string>
+</resources>

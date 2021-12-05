@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/selectableItemBackground"
+    android:paddingTop="@dimen/spacing_14dp"
+    android:paddingEnd="@dimen/spacing_24dp"
+    android:paddingStart="@dimen/spacing_30dp"
+    android:paddingBottom="@dimen/spacing_14dp"
+    android:layout_height="@dimen/spacing_54dp"
+    xmlns:tools="http://schemas.android.com/tools">
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgChecked"
+        app:layout_constraintHorizontal_bias="0"
+        tools:text="Tầng 2 - 5"
+        android:textColor="#0d0d0d"
+        style="@style/StyleTextView.MediumLarge"
+        android:id="@+id/tvNameFloor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginEnd="@dimen/spacing_6dp"
+        android:id="@+id/imgChecked"
+        app:srcCompat="@drawable/ic_check_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

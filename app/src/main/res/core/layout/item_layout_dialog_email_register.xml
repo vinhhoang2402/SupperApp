@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/spacing_20dp"
+    android:paddingEnd="@dimen/spacing_20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_40dp"
+        android:background="@drawable/bg_rectangle_white_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCloseNotifyRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:layout_marginEnd="@dimen/spacing_8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_error" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNotifyTitleFailPass"
+            style="@style/StyleTextView.Medium.Purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_72dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/text_title_fail_pass_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNotifyRegisterMail"
+            style="@style/StyleTextView.Normal.696969"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:paddingStart="@dimen/spacing_30dp"
+            android:paddingEnd="@dimen/spacing_30dp"
+            android:text="@string/text_notify_mail_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNotifyTitleFailPass" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clNotifyEmailNotifyRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_16dp"
+            android:layout_marginTop="@dimen/spacing_24dp"
+            android:layout_marginEnd="@dimen/spacing_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNotifyRegisterMail">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEmailNotifyRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/edtInputEmailForgotPass"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edtInputEmailForgotPass"
+                app:srcCompat="@drawable/ic_email" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtInputEmailForgotPass"
+                style="@style/StyleTextView.Medium.404B69"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/spacing_12dp"
+                android:background="@null"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/text_email_notify_register"
+                android:singleLine="true"
+                app:layout_constraintBottom_toTopOf="@+id/viewMail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivEmailNotifyRegister"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewMail"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/spacing_8dp"
+                android:background="@color/color_404b69"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtInputEmailForgotPass" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_15dp"
+            android:layout_marginTop="@dimen/spacing_24dp"
+            android:layout_marginEnd="@dimen/spacing_15dp"
+            android:layout_marginBottom="@dimen/spacing_18dp"
+            android:background="@drawable/bg_button_sale_pocily"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clNotifyEmailNotifyRegister">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSendMail"
+                style="@style/StyleTextView.Medium.White"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/text_send_register"
+                android:textAllCaps="false" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgTop"
+        android:layout_width="@dimen/spacing_92dp"
+        android:layout_height="@dimen/spacing_92dp"
+        android:src="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNotifyRegisterMail"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/ic_awesome_question_circle"
+        app:layout_constraintBottom_toBottomOf="@id/imgTop"
+        app:layout_constraintEnd_toEndOf="@id/imgTop"
+        app:layout_constraintStart_toStartOf="@id/imgTop"
+        app:layout_constraintTop_toTopOf="@id/imgTop" />
+</androidx.constraintlayout.widget.ConstraintLayout>

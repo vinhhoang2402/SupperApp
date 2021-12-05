@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clContainer"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:background="@drawable/bg_rectangle_c4_ffffff_stroke_e6e6e6"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:singleLine="true"
+        android:maxWidth="180dp"
+        android:id="@+id/tvInputTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_10dp"
+        android:layout_marginTop="@dimen/spacing_12dp"
+        android:layout_marginBottom="@dimen/spacing_12dp"
+        android:text="Tên đơn vị công tác"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_14sp"
+        android:textColor="@color/color_a7a1a1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvInputRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textAllCaps="true"
+        android:textColor="@color/color_ee403f"
+        android:textSize="@dimen/text_14sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvInputTitle"
+        app:layout_constraintTop_toTopOf="@id/tvInputTitle"
+        app:layout_constraintVertical_bias="0"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:textAlignment="textEnd"
+        android:text=""
+        android:textColor="@color/color_241f1f"
+        android:textSize="@dimen/text_14sp"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginBottom="@dimen/spacing_12dp"
+        android:layout_marginStart="@dimen/spacing_10dp"
+        android:layout_marginEnd="@dimen/spacing_10dp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toEndOf="@id/tvInputTitle"
+        app:layout_constraintTop_toTopOf="@id/tvInputTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/llInputEnd" />
+
+    <LinearLayout
+        android:id="@+id/llInputEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="@id/tvInputTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvInputTitle">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivInputEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/spacing_6dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_icon_awesome_calendar_alt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvInputEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_a7a1a1"
+            android:textSize="@dimen/text_14sp"
+            android:visibility="gone"
+            tool:text="VND" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llClick"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

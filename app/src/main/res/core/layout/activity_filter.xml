@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vn.minerva.sale.func.screen.filter.FilterActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar_filter" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_20dp"
+            android:layout_marginEnd="@dimen/spacing_20dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSplash"
+                style="@style/StyleTextView.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_des_filter"
+                android:textColor="@color/color_404b69"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/StyleTextView.Medium.Black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_24dp"
+                android:text="@string/text_title_status_project"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSplash" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvStatus"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_50dp"
+                android:layout_marginTop="@dimen/spacing_10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleProject"
+                style="@style/StyleTextView.Medium.Black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_24dp"
+                android:text="@string/text_apartment_type"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvStatus" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvApartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="@dimen/spacing_12dp"
+                android:minHeight="@dimen/spacing_20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleProject" />
+
+            <LinearLayout
+                android:id="@+id/llProvinces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvApartment">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleCity"
+                    style="@style/StyleTextViewMedium.Medium"
+                    android:text="@string/text_title_country"
+                    android:textColor="@color/color_241f1f" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvProvinces"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_4dp"
+                    android:layout_marginTop="@dimen/spacing_10dp"
+                    android:layout_marginEnd="@dimen/spacing_4dp"
+                    android:layout_marginBottom="@dimen/spacing_6dp"
+                    app:cardCornerRadius="@dimen/spacing_6dp"
+                    app:cardElevation="@dimen/spacing_6dp">
+
+                    <LinearLayout
+                        android:id="@+id/llSearchProvinces"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.SearchView
+                            android:id="@+id/svProvinces"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_44dp"
+                            android:background="@drawable/bg_rectangle_f9f6f6"
+                            android:theme="@style/CustomSearchView"
+                            app:iconifiedByDefault="false"
+                            app:queryHint="@string/text_hint_country" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvProvinces"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center"
+                            android:background="@drawable/bg_rectangle_f9f6f6"
+                            android:minHeight="@dimen/spacing_16dp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/llProvincesResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_4dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvProvinces"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSearchResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:background="@color/white"
+                        android:minHeight="@dimen/spacing_16dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llProvinces">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleDistrict"
+                    style="@style/StyleTextViewMedium.Medium"
+                    android:text="@string/text_title_district"
+                    android:textColor="@color/color_241f1f" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_4dp"
+                    android:layout_marginTop="@dimen/spacing_10dp"
+                    android:layout_marginEnd="@dimen/spacing_4dp"
+                    android:layout_marginBottom="@dimen/spacing_6dp"
+                    app:cardCornerRadius="@dimen/spacing_6dp"
+                    app:cardElevation="@dimen/spacing_6dp">
+
+                    <LinearLayout
+                        android:id="@+id/llSearchDistrict"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.SearchView
+                            android:id="@+id/svDistricts"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_44dp"
+                            android:background="@drawable/bg_rectangle_f9f6f6"
+                            android:theme="@style/CustomSearchView"
+                            app:iconifiedByDefault="false"
+                            app:queryHint="@string/text_hint_country" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvDistricts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center"
+                            android:background="@drawable/bg_rectangle_f9f6f6"
+                            android:minHeight="@dimen/spacing_16dp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/llDistrictResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_4dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvProvinces"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSearchDistrictResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:background="@color/white"
+                        android:minHeight="@dimen/spacing_16dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFilter"
+                style="@style/StyleTextViewMedium.MediumLarge.White"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/spacing_40dp"
+                android:layout_marginBottom="@dimen/spacing_10dp"
+                android:background="@drawable/bg_rectangle_6d30ab_844fb9_6d30ab"
+                android:text="@string/query_search"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llDistrict"
+                app:layout_constraintVertical_bias="0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

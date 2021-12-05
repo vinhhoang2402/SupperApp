@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "700005681877",
+    "firebase_url": "https://sunny-world.firebaseio.com",
+    "project_id": "sunny-world",
+    "storage_bucket": "sunny-world.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700005681877:android:c669a313475dab3cae705c",
+        "android_client_info": {
+          "package_name": "vn.minerva.sale.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700005681877-ao28b0dne96r1ekscjs49j59ppnjv0ip.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.minerva.sale.dev",
+            "certificate_hash": "efb513d83844c411a37ea4f800d2ead7f24d2aef"
+          }
+        },
+        {
+          "client_id": "700005681877-fqio75chkpfmmq7emjokg7jt90cn6a6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrKhQ27z9_VEHlbSsL5j-6t0vjdrWgZx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700005681877-fqio75chkpfmmq7emjokg7jt90cn6a6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_36dp"
+        android:layout_marginTop="@dimen/spacing_36dp"
+        android:layout_marginEnd="@dimen/spacing_36dp"
+        android:background="@drawable/bg_rectangle_6d30ab_4a3bcc_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitleTotalPrice"
+            style="@style/StyleTextView.Normal.White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:paddingTop="@dimen/spacing_16dp"
+            android:text="@string/find_text_summoney"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/StyleTextView.Huge.White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:paddingBottom="@dimen/spacing_16dp"
+            android:text="3.000.000.000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleTotalPrice" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llTitleTypePrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_36dp"
+        android:layout_marginEnd="@dimen/spacing_36dp"
+        android:background="@color/color_bff3f3f3"
+        android:paddingBottom="@dimen/spacing_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintTop">
+
+        <TextView
+            android:id="@+id/tvTitlePaymentStatus"
+            style="@style/StyleTextView.Medium.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_15dp"
+            android:layout_marginTop="@dimen/spacing_34dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/text_progress_contact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btTitlePaymentStatus"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spacing_40dp"
+            android:layout_marginStart="@dimen/spacing_15dp"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:layout_marginEnd="@dimen/spacing_16dp"
+            android:background="@drawable/bg_button_pay"
+            android:drawableEnd="@drawable/ic_group_floor"
+            android:fontFamily="@font/roboto_italic"
+            android:paddingStart="@dimen/spacing_16dp"
+            android:paddingEnd="@dimen/spacing_10dp"
+            android:hint="@string/text_payment_schedule"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColorHint="@color/color_aaaaaa"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/text_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitlePaymentStatus" />
+
+
+        <TextView
+            android:id="@+id/tvTitleTotalPayment"
+            style="@style/StyleTextViewMedium.Medium.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_15dp"
+            android:layout_marginTop="@dimen/spacing_20dp"
+            android:text="@string/text_total_money_contact"
+            app:layout_constraintBottom_toTopOf="@id/tvTotalPayment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btTitlePaymentStatus" />
+
+        <TextView
+            android:id="@+id/tvTotalPayment"
+            style="@style/StyleTextView.Medium.Red"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_40dp"
+            android:layout_marginStart="@dimen/spacing_15dp"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:layout_marginEnd="@dimen/spacing_16dp"
+            android:background="@color/color_e8e8e8"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingStart="@dimen/spacing_16dp"
+            android:paddingTop="@dimen/spacing_10dp"
+            android:paddingBottom="@dimen/spacing_10dp"
+            android:text="2.850.000.000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleTotalPayment" />
+
+        <TextView
+            android:fontFamily="@font/roboto_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_26dp"
+            android:text="@string/text_vnd"
+            style="@style/StyleTextView.Normal.A7A1A1"
+            app:layout_constraintBottom_toBottomOf="@id/tvTotalPayment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTotalPayment" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBtnCallBuy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_40dp"
+            android:layout_marginStart="@dimen/spacing_15dp"
+            android:layout_marginTop="@dimen/spacing_26dp"
+            android:layout_marginEnd="@dimen/spacing_15dp"
+            android:background="@drawable/bg_rectangle_c4_ffffff_stroke_6d30ab"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalPayment">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btCallbuy"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/text_contact_buy"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/text_16sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_40dp"
+            android:layout_marginStart="@dimen/spacing_15dp"
+            android:layout_marginTop="@dimen/spacing_14dp"
+            android:layout_marginEnd="@dimen/spacing_15dp"
+            android:background="@drawable/bg_rectangle_c4_ffffff_stroke_6d30ab"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clBtnCallBuy">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btCS"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/text_button_policy"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/text_16sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btDeposit"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_36dp"
+        android:layout_marginTop="@dimen/spacing_30dp"
+        android:layout_marginEnd="@dimen/spacing_36dp"
+        android:background="@drawable/bg_rectangle_c4_ffffff_stroke_6d30ab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTitleTypePrice">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_56dp"
+            android:background="@drawable/bg_button_sale_policy_deposit"
+            android:text="@string/text_bt_deposit"
+            android:textAllCaps="false"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/text_22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSalePolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_40dp"
+        android:layout_marginBottom="@dimen/spacing_40dp"
+        android:background="@color/color_transparent"
+        android:minHeight="@dimen/spacing_20dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btDeposit"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/clContainer"
+    android:background="@drawable/bg_rectange_006d30ab_cc5e3588"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/view_layout_toolbar_project_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/glBottom"
+        >
+        <TextView
+            android:id="@+id/tvIntro"
+            style="@style/StyleTextView.SupperHug.White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_40dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Dự án VTP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            style="@style/StyleTextView.Large.White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_46dp"
+            android:layout_marginTop="@dimen/spacing_6dp"
+            android:layout_marginEnd="@dimen/spacing_46dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="Khu đô thị sinh thái thông minh mới nhất, hiện đại và xinh đẹp nhất nằm ở Tp Hồ Chi Minh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvIntro" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_72dp"
+            android:layout_marginTop="@dimen/spacing_30dp"
+            android:layout_marginEnd="@dimen/spacing_72dp"
+            android:background="@drawable/bg_rectange_26ffffff_80ffffff"
+            app:layout_constraintTop_toBottomOf="@id/tvContent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/btnRegister"
+                style="@style/StyleTextView.Medium.White"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/text_button_register_sighseeing"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

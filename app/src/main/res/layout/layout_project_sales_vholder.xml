@@ -1,0 +1,46 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context="vn.minerva.sale.func.screen.project_home_sales.ProjectSalesFragment">
+
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/view_layout_toolbar_project_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitleSales"
+        style="@style/StyleTextView.Normal.White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_24dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:paddingStart="@dimen/spacing_56dp"
+        android:paddingEnd="@dimen/spacing_56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbar"
+        tools:text="Bạn có thể lựa chọn các dự án của chúng tôi phù hợp với từng yêu cầu của chính mình. Các căn hộ, biệt thự thông minh có rất nhiều hạn mục khác nhau" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerSales"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/spacing_20dp"
+        android:background="@color/transparent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/spacing_36dp"
+        android:paddingEnd="@dimen/spacing_30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleSales" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

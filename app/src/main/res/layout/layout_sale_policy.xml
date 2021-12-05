@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/view_layout_toolbar_project_home"/>
+
+    <View
+        android:id="@+id/vTop"
+        android:background="@color/color_a7a1a1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tlSalePolicy"
+                style="@style/StyleTextView.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:tabGravity="fill"
+                app:tabIndicator="@color/color_6d30ab"
+                app:tabIndicatorColor="@color/color_6d30ab"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorGravity="bottom"
+                app:tabIndicatorHeight="1.5dp"
+                app:tabInlineLabel="true"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/color_6d30ab"
+                app:tabTextAppearance="@style/MyCustomTextAppearance.MediumLarge"
+                app:tabTextColor="@color/color_aaaaaa" />
+
+            <FrameLayout
+                android:id="@+id/flSalePolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

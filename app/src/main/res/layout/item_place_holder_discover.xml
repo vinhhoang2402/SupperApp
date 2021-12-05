@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/spacing_20dp"
+    android:layout_marginEnd="@dimen/spacing_20dp"
+    android:layout_marginBottom="@dimen/_10sdp">
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/spacing_4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="@dimen/spacing_374dp"
+        android:layout_height="@dimen/spacing_160dp">
+        <View
+            android:id="@+id/viewDiscover"
+            android:background="@color/placeholder_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glVerticalDiscoverCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4" />
+            <View
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/glVerticalDiscoverCity"
+                android:layout_marginEnd="@dimen/spacing_20dp"
+                android:layout_marginStart="@dimen/spacing_20dp"
+                android:background="@color/color_d6d3d3"
+                android:id="@+id/viewTotalProject"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_20dp"/>
+            <View
+                android:layout_marginTop="@dimen/spacing_6dp"
+                android:background="@color/color_d6d3d3"
+                android:layout_marginEnd="@dimen/spacing_60dp"
+                android:layout_marginStart="@dimen/spacing_20dp"
+                android:layout_marginBottom="@dimen/spacing_20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewTotalProject"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_20dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

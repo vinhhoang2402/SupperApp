@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:id="@+id/constraintHomeProject"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerImageDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabDots"
+        app:layout_constraintTop_toBottomOf="@id/glBottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:tabGravity="center"
+        app:tabRippleColor="@null"
+        app:tabBackground="@drawable/tab_selector_library_detail"
+        app:tabIndicator="@null"
+        app:tabPaddingStart="@dimen/_6sdp"
+        app:tabPaddingEnd="@dimen/_6sdp"/>
+    <include
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/view_layout_toolbar_project_home"
+        android:id="@+id/layoutToolbar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvTotalMoney"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_10dp"
+    android:layout_marginStart="@dimen/spacing_20dp"
+    android:layout_marginEnd="@dimen/spacing_20dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTotalMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rectangle_6d30ab_4a3bcc_coner_0"
+        android:paddingBottom="@dimen/spacing_18dp">
+
+        <TextView
+            android:id="@+id/tvTitleTotalMoney"
+            style="@style/StyleTextViewMedium.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_14dp"
+            android:layout_marginTop="@dimen/spacing_18dp"
+            android:text="@string/text_payment"
+            android:textColor="@color/color_fcfcfc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            style="@style/StyleTextView.MediumLarge.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_18dp"
+            android:layout_marginEnd="@dimen/spacing_36dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvTitleTotalMoney"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="100.000.000" />
+
+        <TextView
+            android:id="@+id/tvUnit"
+            style="@style/StyleTextView.Small.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingStart="@dimen/spacing_10dp"
+            android:text="đ"
+            app:layout_constraintBottom_toTopOf="@id/tvPrice"
+            app:layout_constraintEnd_toEndOf="@id/tvPrice"
+            app:layout_constraintStart_toEndOf="@id/tvPrice"
+            app:layout_constraintTop_toTopOf="@id/tvPrice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

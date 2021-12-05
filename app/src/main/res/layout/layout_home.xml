@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    android:id="@+id/swRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/clContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layoutToolbar"
+            layout="@layout/view_layout_toolbar_home" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsvContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/sflLoading"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/spacing_12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    shimmer:duration="1500">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <include
+                            android:id="@+id/viewDiscover"
+                            layout="@layout/item_place_holder_title_home" />
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/spacing_12dp"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@id/viewDiscover"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp">
+
+                            <LinearLayout
+                                android:layout_marginBottom="@dimen/spacing_12dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <include layout="@layout/item_place_holder_layout_home_discover" />
+                                <include layout="@layout/item_place_holder_layout_home_discover" />
+                            </LinearLayout>
+
+                            <include
+                                android:id="@+id/viewProject"
+                                layout="@layout/item_place_holder_title_home" />
+
+                            <LinearLayout
+                                android:layout_marginBottom="@dimen/spacing_12dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <include layout="@layout/item_place_holder_layout_home_project" />
+                                <include layout="@layout/item_place_holder_layout_home_project" />
+                            </LinearLayout>
+
+                            <include
+                                android:id="@+id/viewApartment"
+                                layout="@layout/item_place_holder_title_home" />
+
+                            <LinearLayout
+                                android:layout_marginBottom="@dimen/spacing_12dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <include layout="@layout/item_place_holder_layout_home_project" />
+                                <include layout="@layout/item_place_holder_layout_home_project" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glVerticalDiscoverCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.85" />
+
+                <TextView
+                    android:id="@+id/tvDiscover"
+                    style="@style/StyleTextView.Huge.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_6dp"
+                    android:layout_marginStart="@dimen/spacing_20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/text_discover"
+                    app:layout_constraintEnd_toEndOf="@id/glVerticalDiscoverCity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivDiscover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_12dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDiscover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/glVerticalDiscoverCity"
+                    app:layout_constraintTop_toTopOf="@id/tvDiscover"
+                    app:srcCompat="@drawable/ic_arrow_purple" />
+
+                <LinearLayout
+                    android:id="@+id/llDiscover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDiscover">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvDiscover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="@dimen/spacing_24dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvProject"
+                    style="@style/StyleTextViewMedium.Large.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_30dp"
+                    android:layout_marginStart="@dimen/spacing_20dp"
+                    android:text="@string/text_list_project"
+                    app:layout_constraintEnd_toEndOf="@id/glVerticalDiscoverCity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/llDiscover" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_12dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintBottom_toBottomOf="@id/tvProject"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvProject"
+                    app:layout_constraintTop_toTopOf="@id/tvProject"
+                    app:srcCompat="@drawable/ic_arrow_purple" />
+
+                <LinearLayout
+                    android:id="@+id/llProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvProject">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvProject"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="@dimen/spacing_24dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvApartment"
+                    style="@style/StyleTextViewMedium.Large.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_22dp"
+                    android:layout_marginStart="@dimen/spacing_20dp"
+                    android:text="@string/text_apartment_hobby"
+                    app:layout_constraintEnd_toEndOf="@id/glVerticalDiscoverCity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/llProject" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivApartment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_12dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintBottom_toBottomOf="@id/tvApartment"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvApartment"
+                    app:layout_constraintTop_toTopOf="@id/tvApartment"
+                    app:srcCompat="@drawable/ic_arrow_purple" />
+
+                <LinearLayout
+                    android:id="@+id/llApartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_8dp"
+                    android:layout_marginBottom="@dimen/spacing_12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvApartment">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvApartment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/spacing_24dp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

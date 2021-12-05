@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_marginStart="@dimen/spacing_16dp"
+    android:layout_marginTop="@dimen/spacing_16dp"
+    android:layout_marginEnd="@dimen/spacing_16dp"
+    android:elevation="4dp"
+    android:background="@color/color_b3ffffff">
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pcChart"
+        android:layout_width="@dimen/spacing_234dp"
+        android:layout_height="@dimen/spacing_234dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvAssertLoan"/>
+    <vn.minerva.sale.app.util.view.CircularSeekBar
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/csSeekBar"
+        app:circle_stroke_width="1dp"
+        app:circle_color="@color/color_6d30ab"
+        app:circle_progress_end_color="@color/color_6d30ab"
+        app:circle_progress_start_color="@color/color_6d30ab"
+        app:end_angle="35"
+        app:circle_progress="100"
+        app:start_angle="145"
+        app:pointer_radius="4dp"
+        app:pointer_halo_width="0.1dp"
+        app:pointer_color="@color/color_6d30ab"
+        app:pointer_halo_color="@color/color_6d30ab"
+        app:pointer_halo_color_ontouch="@color/color_6d30ab"
+        app:layout_constraintStart_toStartOf="@+id/pcChart"
+        app:layout_constraintEnd_toEndOf="@+id/pcChart"
+        app:layout_constraintTop_toTopOf="@+id/pcChart"
+        app:layout_constraintBottom_toBottomOf="@+id/pcChart"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSumInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_20dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/text_info_summary"
+        android:textColor="@color/color_6d30ab"
+        android:textSize="@dimen/text_18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvAssertLoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_20dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSumInfo">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAssertLoan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_assert_loans" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvWorkIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="22dp"
+        android:layout_marginStart="@dimen/spacing_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintCircle="@+id/pcChart"
+        app:layout_constraintCircleAngle="300"
+        app:layout_constraintCircleRadius="130dp"
+        app:cardElevation="4dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivWorkInCome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_work_income" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSumInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="22dp"
+        android:layout_marginStart="@dimen/spacing_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintCircle="@+id/pcChart"
+        app:layout_constraintCircleAngle="245"
+        app:layout_constraintCircleRadius="130dp"
+        app:cardElevation="4dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivSumInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sum_info_active"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLoanProposal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintCircle="@+id/pcChart"
+        app:layout_constraintCircleAngle="60"
+        app:layout_constraintCircleRadius="130dp"
+        app:cardElevation="4dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivLoanProposal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_loan_proposal" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="22dp"
+        android:layout_marginEnd="@dimen/spacing_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintCircle="@+id/pcChart"
+        app:layout_constraintCircleAngle="115"
+        app:layout_constraintCircleRadius="130dp"
+        app:cardElevation="4dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_summary" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHeaderSum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_14dp"
+        android:layout_marginTop="@dimen/spacing_24dp"
+        android:layout_marginEnd="@dimen/spacing_14dp"
+        android:layout_marginBottom="@dimen/spacing_28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pcChart">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_rectangle_c4_tl_bl_ee403f"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/glCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleLoanMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/text_loan_money"
+                android:textColor="@color/color_dfdfdf"
+                android:textSize="@dimen/text_13sp"
+                app:layout_constraintBottom_toTopOf="@id/tvLoanMoney"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLoanMoney"
+                android:text="@string/text_500_000_000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/color_fcfcfc"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleLoanMoney" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rectangle_c4_tr_br_ffffff_str_ee403f"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/glCenter"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/vCircleTotalMoney"
+                android:layout_width="@dimen/spacing_8dp"
+                android:layout_height="@dimen/spacing_8dp"
+                android:layout_marginStart="@dimen/spacing_8dp"
+                android:background="@drawable/bg_circle_51c471"
+                app:layout_constraintBottom_toBottomOf="@id/tvTotalMoney"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvTotalMoney" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleTotalMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/text_total_money"
+                android:textColor="@color/color_aaaaaa"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvTotalMoney"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/vCircleTotalMoney"
+                app:layout_constraintTop_toTopOf="@id/tvTotalMoney" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalMoney"
+                android:text="@string/text_3_000_000_000"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10dp"
+                android:layout_marginTop="@dimen/spacing_8dp"
+                android:layout_marginBottom="@dimen/spacing_8dp"
+                android:layout_marginEnd="@dimen/spacing_24dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:fontFamily="@font/roboto_bold"
+                android:singleLine="true"
+                android:textColor="@color/color_241f1f"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintBottom_toTopOf="@id/vLineCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/tvTitleTotalMoney"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/vLineCenter"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/color_ee403f"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/glCenterHorizonl" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glCenterHorizonl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <View
+                android:id="@+id/vCircleInterestMoney"
+                android:layout_width="@dimen/spacing_8dp"
+                android:layout_height="@dimen/spacing_8dp"
+                android:layout_marginStart="@dimen/spacing_8dp"
+                android:background="@drawable/bg_circle_fc9234"
+                app:layout_constraintBottom_toBottomOf="@id/tvInterestMoney"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvInterestMoney" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleInterestMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/text_total_money"
+                android:textColor="@color/color_aaaaaa"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvInterestMoney"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/vCircleInterestMoney"
+                app:layout_constraintTop_toTopOf="@id/tvInterestMoney" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInterestMoney"
+                android:text="@string/text_hint_total_interest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10dp"
+                android:layout_marginTop="@dimen/spacing_8dp"
+                android:layout_marginBottom="@dimen/spacing_8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_bold"
+                android:singleLine="true"
+                android:layout_marginEnd="@dimen/spacing_24dp"
+                android:gravity="end"
+                android:textColor="@color/color_241f1f"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/tvTitleInterestMoney"
+                app:layout_constraintTop_toBottomOf="@id/glCenterHorizonl" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

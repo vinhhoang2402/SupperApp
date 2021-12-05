@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/view_layout_toolbar_project_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/StyleTextView.Large.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_40dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="NHÀ PHÁT TRIỂN DỰ ÁN"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_10dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                app:srcCompat="@drawable/vtp_logo_2_new" />
+
+            <TextView
+                android:id="@+id/tvTitleAddress"
+                style="@style/StyleTextView.Large.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_40dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="ĐỊA CHỈ DỰ ÁN"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/StyleTextView.Medium.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_6dp"
+                android:fontFamily="@font/roboto_italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleAddress"
+                tools:text="119 Pasteur, P6 , Q3, Tp. HCM" />
+
+            <TextView
+                android:id="@+id/tvTitleHotline"
+                style="@style/StyleTextView.Normal.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="HOTLINE"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+            <TextView
+                android:id="@+id/tvHotline"
+                style="@style/StyleTextView.Large.Green"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_6dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleHotline"
+                tools:text="1900 - 123 -456" />
+
+            <TextView
+                android:id="@+id/tvTitleFax"
+                style="@style/StyleTextView.Normal.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_14dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="FAX"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHotline" />
+
+            <TextView
+                android:id="@+id/tvFax"
+                style="@style/StyleTextView.Large.Green"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_6dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleFax"
+                tools:text="(+84 28) 7134046" />
+
+            <TextView
+                android:id="@+id/tvTitleTrading"
+                style="@style/StyleTextView.Large.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_40dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="SÀN GIAO DỊCH DỰ ÁN"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFax" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTrading"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleTrading" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

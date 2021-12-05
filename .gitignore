@@ -1,0 +1,97 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@ntanhgithub 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+JetBrains
+/
+kotlin
+755
+1.3k
+31.2k3.8k
+ Code Pull requests 224 Actions Security Insights
+kotlin/.gitignore
+@anton-bannykh anton-bannykh DCE-driven mode
+1e96c3d on Feb 7
+@4u7@snrostov@yanex@shafirov@shalupov@ligee@bashor@ilya-g@ilgonmic@abreslav@altsvetkov@udalov@stepancheg@stigger@YusukeHosonuma@goodwinnk@NataliaUkhorskaya@max-kammerer@jstrachan@anton-bannykh@asedunov@Alefas
+59 lines (59 sloc)  1.43 KB
+  
+.DS_Store
+.idea/shelf
+/confluence/target
+/dependencies/repo
+/android.tests.dependencies
+/dependencies/android.tests.dependencies
+/dist
+/local
+/gh-pages
+/ideaSDK
+/clionSDK
+/android-studio/sdk
+out/
+/tmp
+workspace.xml
+*.versionsBackup
+/idea/testData/debugger/tinyApp/classes*
+/jps-plugin/testData/kannotator
+/js/js.translator/testData/out/
+/js/js.translator/testData/out-min/
+/js/js.translator/testData/out-pir/
+.gradle/
+build/
+!**/src/**/build
+!**/test/**/build
+*.iml
+!**/testData/**/*.iml
+.idea/libraries/Gradle*.xml
+.idea/libraries/Maven*.xml
+.idea/artifacts/PILL_*.xml
+.idea/artifacts/KotlinPlugin.xml
+.idea/modules
+.idea/runConfigurations/JPS_*.xml
+.idea/runConfigurations/PILL_*.xml
+.idea/libraries
+.idea/modules.xml
+.idea/gradle.xml
+.idea/compiler.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/.name
+.idea/artifacts/dist_auto_*
+.idea/artifacts/dist.xml
+.idea/artifacts/ideaPlugin.xml
+.idea/artifacts/kotlinc.xml
+.idea/artifacts/kotlin_compiler_jar.xml
+.idea/artifacts/kotlin_plugin_jar.xml
+.idea/artifacts/kotlin_jps_plugin_jar.xml
+.idea/artifacts/kotlin_daemon_client_jar.xml
+.idea/artifacts/kotlin_imports_dumper_compiler_plugin_jar.xml
+.idea/artifacts/kotlin_main_kts_jar.xml
+.idea/artifacts/kotlin_compiler_client_embeddable_jar.xml
+.idea/artifacts/kotlin_reflect_jar.xml
+.idea/jarRepositories.xml
+kotlin-ultimate/
+node_modules/
+.rpt2_cache/
+libraries/tools/kotlin-test-js-runner/lib/
+libraries/tools/kotlin-source-map-loader/lib/
+local.properties
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

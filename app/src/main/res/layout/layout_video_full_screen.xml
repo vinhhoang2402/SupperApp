@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnFile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <TextureView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/spacing_40dp"
+            android:layout_height="@dimen/spacing_40dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="@dimen/spacing_10dp"
+            android:id="@+id/constraintController"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_rectange_80322b39"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/videoView"
+            app:layout_constraintEnd_toEndOf="@id/videoView"
+            app:layout_constraintStart_toStartOf="@id/videoView"
+            app:layout_constraintTop_toTopOf="@id/videoView">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgExitFullScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/spacing_20dp"
+                android:layout_marginEnd="@dimen/spacing_20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/spacing_4dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_fullscreen_exit_black_24dp" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnPlay"
+                android:layout_width="@dimen/spacing_56dp"
+                android:layout_height="@dimen/spacing_56dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_play_arrow_black_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnPause"
+                android:layout_width="@dimen/spacing_56dp"
+                android:layout_height="@dimen/spacing_56dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_pause_black_24dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glFullScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/sbTimeVideo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_4dp"
+                android:layout_marginEnd="@dimen/spacing_4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvLenghVideo"
+                app:layout_constraintStart_toEndOf="@id/tvTimeVideo"
+                app:layout_constraintTop_toTopOf="@id/glHorizontal" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.89" />
+
+            <TextView
+                android:id="@+id/tvTimeVideo"
+                style="@style/StyleTextView.Small.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_8dp"
+                android:padding="@dimen/spacing_4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/glHorizontal"
+                tools:text="122:3232:3232" />
+
+            <TextView
+                android:id="@+id/tvLenghVideo"
+                style="@style/StyleTextView.Small.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_8dp"
+                android:layout_marginBottom="@dimen/spacing_8dp"
+                android:gravity="center"
+                android:padding="@dimen/spacing_4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/glFullScreen"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="122:3232:3232" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

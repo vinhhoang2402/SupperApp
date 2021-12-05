@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid
+        android:width="1px"
+        android:color="@color/back_241f1f" />
+    <size android:height="1px" />
+    <padding
+        android:left="@dimen/spacing_20dp"
+        android:right="@dimen/spacing_20dp"/>
+</shape>
+<!--<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid
+                android:width="1px"
+                android:color="@color/color_e4e4e4" />
+            <size android:height="1px" />
+            <padding
+                android:left="@dimen/spacing_20dp"
+                android:right="@dimen/spacing_20dp"/>
+        </shape>
+    </item>
+    <item android:left="@dimen/spacing_20dp" android:right="@dimen/spacing_20dp"/>
+</layer-list>-->

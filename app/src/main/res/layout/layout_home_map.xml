@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cvBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mapbox_cameraTilt="60"
+        app:mapbox_renderTextureMode="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSearchHomeMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/spacing_6dp"
+        app:cardElevation="@dimen/spacing_10dp"
+        android:layout_marginTop="@dimen/spacing_56dp"
+        android:layout_marginStart="@dimen/spacing_16dp"
+        android:layout_marginEnd="@dimen/spacing_16dp"
+        android:maxHeight="@dimen/spacing_270dp"
+        app:layout_constraintEnd_toEndOf="@id/mapView"
+        app:layout_constraintStart_toStartOf="@id/mapView"
+        app:layout_constraintTop_toTopOf="@id/mapView"
+        app:layout_constraintVertical_bias="0">
+
+        <LinearLayout
+            android:id="@+id/llSearchProvinces"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/spacing_16dp"
+            android:layout_marginEnd="@dimen/spacing_16dp"
+            android:background="@color/transparent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSearchHomeMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/spacing_10dp"
+                android:background="@drawable/bg_rectange_c6_ffffff">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_10dp"
+                    app:srcCompat="@drawable/ic_search_silver_map"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtSearchView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@id/ivSearch"
+                    app:layout_constraintTop_toTopOf="@id/ivSearch"
+                    app:layout_constraintBottom_toBottomOf="@id/ivSearch"
+                    app:layout_constraintEnd_toStartOf="@id/vLine"
+                    android:layout_marginEnd="@dimen/spacing_10dp"
+                    android:layout_marginStart="@dimen/spacing_12dp"
+                    android:background="@null"
+                    android:hint="@string/query_search"
+                    android:singleLine="true"
+                    android:textColorHint="@color/color_241f1f"
+                    android:textColor="@color/color_241f1f"
+                    style="@style/StyleTextView.Normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:srcCompat="@drawable/ic_filter_map_black" />
+
+                <View
+                    android:id="@+id/vLine"
+                    android:layout_width="1px"
+                    android:layout_height="0dp"
+                    android:background="@color/color_d6d3d3"
+                    android:layout_marginEnd="@dimen/spacing_14dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivFilter" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSearchResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/spacing_6dp"
+                    android:paddingBottom="@dimen/spacing_6dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/bg_rectangle_c4_ebe0f6"
+                    app:layout_constraintStart_toEndOf="@id/ivSearch"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="@dimen/spacing_12dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSearchResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_16dp"
+                        android:layout_marginEnd="@dimen/spacing_16dp"
+                        style="@style/StyleTextView.Normal"
+                        android:textColor="@color/color_6d30ab"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ivDeleteSearchResult"
+                        tools:text="Royal Garden"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivDeleteSearchResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/spacing_2dp"
+                        android:layout_marginEnd="@dimen/spacing_8dp"
+                        app:layout_constraintStart_toEndOf="@id/tvSearchResult"
+                        app:layout_constraintTop_toTopOf="@id/tvSearchResult"
+                        app:layout_constraintBottom_toBottomOf="@id/tvSearchResult"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_delete_all_purple"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProvinces"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:background="@drawable/bg_rectangle_c6_bl_br_ffffff"
+                android:minHeight="@dimen/spacing_20dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_18dp"
+        android:layout_marginBottom="@dimen/spacing_16dp"
+        android:background="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="@dimen/spacing_10dp"
+        app:layout_constraintBottom_toTopOf="@id/ivMyLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/spacing_44dp"
+            android:layout_height="@dimen/spacing_78dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glCenterZoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <LinearLayout
+                android:id="@+id/llZoomOut"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@id/glCenterZoom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_remove" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="0dp"
+                android:background="@color/color_e6e6e6"
+                android:layout_marginStart="@dimen/spacing_10dp"
+                android:layout_marginEnd="@dimen/spacing_10dp"
+                app:layout_constraintTop_toBottomOf="@id/llZoomIn"
+                app:layout_constraintBottom_toTopOf="@id/llZoomOut"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/llZoomIn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/glCenterZoom">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_add" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ivMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_18dp"
+        android:layout_marginBottom="@dimen/spacing_16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="@dimen/spacing_10dp"
+        app:layout_constraintBottom_toTopOf="@id/cvBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="@dimen/spacing_44dp"
+            android:layout_height="@dimen/spacing_44dp"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_near_me" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/spacing_44dp"
+        android:layout_height="@dimen/spacing_44dp"
+        android:src="@drawable/ic_arrows_download_arrow"
+        app:borderWidth="0dp"
+        app:fabCustomSize="@dimen/spacing_44dp"
+        app:elevation="@dimen/spacing_22dp"
+        android:backgroundTint="@color/colorWhite"
+        app:maxImageSize="@dimen/spacing_20dp"
+        android:layout_marginStart="@dimen/spacing_16dp"
+        android:layout_marginBottom="@dimen/spacing_16dp"
+        app:layout_constraintBottom_toTopOf="@id/cvBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        style="?android:attr/selectableItemBackgroundBorderless"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_280dp"
+        app:cardElevation="@dimen/spacing_40dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mapView">
+
+        <LinearLayout
+            android:id="@+id/llBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProject"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mapView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clProjectDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glBottom6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.7" />
+
+                <ImageView
+                    android:id="@+id/ivProjectAvatar"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/glBottom6" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgSellHomeMap"
+                    android:layout_width="72dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="@dimen/spacing_24dp"
+                    android:layout_height="@dimen/spacing_24dp"
+                    app:layout_constraintTop_toTopOf="@id/ivProjectAvatar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/ivProjectAvatar"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:src="@drawable/ic_sell"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSellHomeMap"
+                    style="@style/StyleTextView.Small.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:text="@string/text_sell"
+                    app:layout_constraintBottom_toBottomOf="@id/imgSellHomeMap"
+                    app:layout_constraintEnd_toEndOf="@id/imgSellHomeMap"
+                    app:layout_constraintStart_toStartOf="@id/imgSellHomeMap"
+                    app:layout_constraintTop_toTopOf="@id/imgSellHomeMap" />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginTop="@dimen/spacing_14dp"
+                    android:id="@+id/tvProjectTitle"
+                    app:fontFamily="@font/roboto_bold"
+                    style="@style/StyleTextView.MediumLarge.6D30AB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="Royal Garden"
+                    android:layout_marginEnd="@dimen/spacing_6dp"
+                    app:layout_constraintTop_toBottomOf="@id/glBottom6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:layout_marginStart="@dimen/spacing_16dp" />
+
+<!--                <vn.minerva.sale.app.util.view.custom_rating_bar.CustomRatingBar-->
+<!--                    android:id="@+id/rbProject"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:numRating="three"-->
+<!--                    android:layout_marginEnd="@dimen/spacing_16dp"-->
+<!--                    app:layout_constraintTop_toTopOf="@id/tvProjectTitle"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/tvProjectTitle"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/tvProjectType"-->
+<!--                    android:textSize="@dimen/text_12sp"-->
+<!--                    android:fontFamily="@font/roboto_light_italic"-->
+<!--                    android:textColor="@color/color_4a3bcc"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:layout_marginEnd="@dimen/spacing_16dp"-->
+<!--                    android:layout_marginTop="@dimen/spacing_4dp"-->
+<!--                    tools:text="Chung cư cao cấp | Trung tâm thương mại"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/tvProjectTitle"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/tvProjectTitle"-->
+<!--                    app:layout_constraintBottom_toTopOf="@id/tvProjectAddress"-->
+<!--                    app:layout_constraintHorizontal_bias="0"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent" />-->
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_location_map_blue"
+                    app:layout_constraintStart_toStartOf="@id/tvProjectTitle"
+                    app:layout_constraintTop_toTopOf="@id/tvProjectAddress"
+                    app:layout_constraintBottom_toBottomOf="@id/tvProjectAddress" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProjectAddress"
+                    style="@style/StyleTextView.Small.Blue"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_16dp"
+                    android:layout_marginStart="@dimen/spacing_4dp"
+                    android:layout_marginTop="@dimen/spacing_6dp"
+                    tools:text="170 -190 Nguyễn Thị Thập, P.Tân Phong, Quận 7, TPHCM"
+                    app:layout_constraintTop_toBottomOf="@id/tvProjectTitle"
+                    app:layout_constraintStart_toEndOf="@id/ivAddress"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/ivArea"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:srcCompat="@drawable/ic_area_blue"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/tvProjectTitle"-->
+<!--                    app:layout_constraintTop_toTopOf="@id/tvProjectArea"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/tvProjectArea"-->
+<!--                    app:layout_constraintEnd_toEndOf="@id/ivAddress" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/tvProjectArea"-->
+<!--                    style="@style/StyleTextView.Normal.BlueText"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="@dimen/spacing_16dp"-->
+<!--                    android:layout_marginStart="@dimen/spacing_4dp"-->
+<!--                    android:layout_marginBottom="@dimen/spacing_16dp"-->
+<!--                    android:layout_marginTop="@dimen/spacing_6dp"-->
+<!--                    tools:text="17.302,6 m2 "-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/tvProjectAddress"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/ivAddress"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/ivTime"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:srcCompat="@drawable/ic_time_blue"-->
+<!--                    android:layout_marginStart="@dimen/spacing_40dp"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/tvProjectArea"-->
+<!--                    app:layout_constraintTop_toTopOf="@id/tvProjectArea"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/tvProjectArea" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/tvProjectTime"-->
+<!--                    style="@style/StyleTextView.Normal.BlueText"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="@dimen/spacing_16dp"-->
+<!--                    android:layout_marginStart="@dimen/spacing_4dp"-->
+<!--                    tools:text="Quý 4/2020"-->
+<!--                    app:layout_constraintTop_toTopOf="@id/tvProjectArea"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/ivTime"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/tvProjectArea"-->
+<!--                    app:layout_constraintHorizontal_bias="0"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                layout="@layout/layout_empty"
+                android:visibility="gone"
+                android:id="@+id/clEmpty" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

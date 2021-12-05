@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintSuccess"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/spacing_20dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        style="@style/StyleTextView.LowHuge.Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/text_register_success"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/glTop" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        style="@style/StyleTextView.Medium.404B69"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/text_content_register_success"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRegister" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvContent"
+        app:srcCompat="@drawable/ic_register_success" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStart"
+        style="@style/StyleTextView.MediumLarge.White"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_44dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_24dp"
+        android:background="@drawable/bg_rectangle_6d30ab_844fb9_6d30ab"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/text_start"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgSuccess" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="@dimen/spacing_2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_close_black_18"
+        android:id="@+id/btnCancel"
+        android:padding="@dimen/spacing_4dp"
+        android:layout_marginStart="@dimen/spacing_20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:fontFamily="@font/roboto_bold"
+        style="@style/StyleTextViewMedium.Huge.Black"
+        android:layout_width="0dp"
+        android:paddingStart="@dimen/spacing_12dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/text_title_filter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        app:layout_constraintEnd_toStartOf="@id/btnReset"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="@dimen/spacing_2dp"
+        app:srcCompat="@drawable/ic_reset_purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_4dp"
+        android:id="@+id/btnReset"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginEnd="@dimen/spacing_20dp"
+        app:layout_constraintStart_toEndOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

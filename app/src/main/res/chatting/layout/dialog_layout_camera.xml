@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rectange_c12_ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/vCenterClose"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toTopOf="@id/ivCloseDialog"
+        app:layout_constraintBottom_toBottomOf="@id/ivCloseDialog"
+        app:layout_constraintStart_toStartOf="@id/ivCloseDialog"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCloseDialog"
+        app:srcCompat="@drawable/ic_close_search"
+        android:padding="@dimen/spacing_12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitleWarning"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitleWarning"
+        app:layout_constraintHorizontal_bias="1"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleWarning"
+        android:text="@string/text_dialog_name_camera"
+        android:textAllCaps="true"
+        android:layout_marginTop="@dimen/spacing_12dp"
+        style="@style/StyleTextViewMedium.Large.Black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/vDivider"
+        android:layout_marginTop="@dimen/spacing_12dp"
+        android:background="@color/color_a4a4a4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleWarning"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDialogContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_30dp"
+        android:layout_marginStart="@dimen/spacing_50dp"
+        android:layout_marginEnd="@dimen/spacing_50dp"
+        android:gravity="center"
+        style="@style/StyleTextView.Medium"
+        android:textColor="@color/color_6d6d6d"
+        android:text="@string/text_notification_option_get_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDivider"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTakeAPhoto"
+        style="@style/StyleTextView.Medium"
+        android:layout_marginTop="@dimen/spacing_30dp"
+        android:background="@drawable/bg_rectange_bl12_eaeaea"
+        android:text="@string/text_take_a_photo"
+        android:textColor="@color/color_6d6d6d"
+        android:textAllCaps="false"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnChooseImages"
+        app:layout_constraintTop_toBottomOf="@id/tvDialogContent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnChooseImages"
+        style="@style/StyleTextView.Medium"
+        android:layout_marginTop="@dimen/spacing_30dp"
+        android:background="@drawable/bg_rectange_br12_6d30ab"
+        android:text="@string/text_choose_a_image"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btnTakeAPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDialogContent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

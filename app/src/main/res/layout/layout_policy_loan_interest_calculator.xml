@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_eeedef"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/toolbar_loan"
+        layout="@layout/view_layout_toolbar_project_home" />
+
+    <View
+        android:id="@+id/vTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_a7a1a1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_eeedef"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/clPolicyLoanHeader"
+                layout="@layout/item_layout_policy_loan_header_vholder" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintFirst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_30dp"
+                android:layout_marginStart="@dimen/spacing_16dp"
+                android:layout_marginEnd="@dimen/spacing_16dp"
+                android:background="@drawable/bg_rectangle_29000000"
+                android:elevation="6dp">
+                <TextView
+                    android:id="@+id/tvTotalPriceTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_total_price"
+                    style="@style/StyleTextViewMedium.Medium.Black"
+                    android:layout_marginTop="@dimen/spacing_24dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                    android:id="@+id/tvTotalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/spacing_16dp"
+                    android:text="@string/text_hint_total_price"
+                    android:textColor="@color/color_241f1f"
+                    android:fontFamily="@font/roboto_medium"
+                    style="@style/StyleTextViewMedium.Normal.Black"
+                    android:background="@drawable/bg_rectangle_transparent_e8e8e8"
+                    android:layout_marginTop="@dimen/spacing_8dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginEnd="@dimen/spacing_14dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTotalPriceTitle"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/tvAmountBorrowTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_policy_amount_borrow"
+                    android:textColor="@color/color_241f1f"
+                    android:textSize="@dimen/text_16sp"
+                    android:layout_marginTop="@dimen/spacing_24dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvTotalPrice"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edAmountBorrow"
+                    style="@style/StyleTextViewMedium.Normal"
+                    android:layout_width="match_parent"
+                    android:maxLength="22"
+                    android:inputType="number"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="@dimen/spacing_14dp"
+                    android:background="@drawable/bg_rectangle_fcfcfc_ebe0f6"
+                    android:paddingStart="@dimen/spacing_16dp"
+                    android:hint="@string/text_hint_enter_amount_want_to_borrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAmountBorrowTitle"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/tvTenorTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_policy_tenor"
+                    style="@style/StyleTextViewMedium.Medium.Black"
+                    android:layout_marginTop="@dimen/spacing_24dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    app:layout_constraintTop_toBottomOf="@id/edAmountBorrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edTenor"
+                    style="@style/StyleTextViewMedium.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginTop="4dp"
+                    android:inputType="number"
+                    android:layout_marginEnd="@dimen/spacing_14dp"
+                    android:background="@drawable/bg_rectangle_fcfcfc_ebe0f6"
+                    android:paddingStart="@dimen/spacing_16dp"
+                    android:hint="@string/text_hint_enter_years"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTenorTitle"
+                    tools:ignore="RtlSymmetry" />
+
+                <vn.minerva.sale.app.util.view.custom_seekbar.CustomSeekBarView
+                    android:id="@+id/sbYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_12dp"
+                    android:layout_marginBottom="@dimen/spacing_12dp"
+                    android:paddingStart="@dimen/spacing_14dp"
+                    android:paddingEnd="@dimen/spacing_14dp"
+                    app:csb_max="25"
+                    app:csb_min="1"
+                    app:csb_infoInputText="@string/text_progress_year"
+                    app:csb_progress="1"
+                    app:csb_textStart="@string/text_one_year"
+                    app:csb_textEnd="@string/text_twenty_five_year"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edTenor"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintSecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_30dp"
+                android:layout_marginStart="@dimen/spacing_16dp"
+                android:layout_marginEnd="@dimen/spacing_16dp"
+                android:background="@drawable/bg_rectangle_29000000"
+                android:elevation="6dp">
+                <TextView
+                    android:id="@+id/tvInitialInterestTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_policy_first_interest_rate"
+                    style="@style/StyleTextViewMedium.Medium.Black"
+                    android:layout_marginTop="@dimen/spacing_24dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                    android:id="@+id/tvInitialInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/spacing_16dp"
+                    android:text="@string/text_hint_policy_interest_rate"
+                    style="@style/StyleTextViewMedium.Normal.Black"
+                    android:background="@drawable/bg_rectangle_transparent_e8e8e8"
+                    android:layout_marginTop="@dimen/spacing_8dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginEnd="@dimen/spacing_14dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvInitialInterestTitle"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/tvFixTermInterestTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_policy_fix_term_term_interest"
+                    style="@style/StyleTextViewMedium.Medium.Black"
+                    android:layout_marginTop="@dimen/spacing_24dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvInitialInterest"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edFixTermInterest"
+                    style="@style/StyleTextViewMedium.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginTop="4dp"
+                    android:inputType="number"
+                    android:layout_marginEnd="@dimen/spacing_14dp"
+                    android:background="@drawable/bg_rectangle_fcfcfc_ebe0f6"
+                    android:paddingStart="@dimen/spacing_16dp"
+                    android:hint="@string/text_hint_enter_months"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFixTermInterestTitle"
+                    tools:ignore="RtlSymmetry"/>
+
+                <vn.minerva.sale.app.util.view.custom_seekbar.CustomSeekBarView
+                    android:id="@+id/sbMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_12dp"
+                    android:layout_marginBottom="@dimen/spacing_12dp"
+                    android:paddingStart="@dimen/spacing_14dp"
+                    android:paddingEnd="@dimen/spacing_14dp"
+                    app:csb_max="12"
+                    app:csb_min="1"
+                    app:csb_infoInputText="@string/text_progress_month"
+                    app:csb_progress="1"
+                    app:csb_textStart="@string/text_hint_start_seek_bar_choose_year"
+                    app:csb_textEnd="@string/text_hint_end_seekbar_choose_month"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edFixTermInterest"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:paddingBottom="@dimen/spacing_22dp"
+                android:id="@+id/constraintThird"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_30dp"
+                android:layout_marginStart="@dimen/spacing_16dp"
+                android:layout_marginEnd="@dimen/spacing_16dp"
+                android:background="@drawable/bg_rectangle_29000000"
+                android:elevation="6dp">
+                <TextView
+                    android:id="@+id/tvPostInterestTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_policy_post_incentive_interest"
+                    style="@style/StyleTextViewMedium.Medium.Black"
+                    android:layout_marginTop="@dimen/spacing_24dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                    android:id="@+id/tvPostInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/spacing_16dp"
+                    android:text="@string/text_hint_policy_interest_rate"
+                    style="@style/StyleTextViewMedium.Normal.Black"
+                    android:background="@drawable/bg_rectangle_transparent_e8e8e8"
+                    android:layout_marginTop="@dimen/spacing_8dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginEnd="@dimen/spacing_14dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPostInterestTitle"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/tvInterestPaymentDateTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_policy_interest_payment_date"
+                    style="@style/StyleTextViewMedium.Medium.Black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginTop="@dimen/spacing_24dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvPostInterest"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                    android:textAlignment="viewStart"
+                    android:gravity="center"
+                    android:id="@+id/tvInterestPaymentDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:layout_marginLeft="@dimen/spacing_14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="@dimen/spacing_14dp"
+                    android:background="@drawable/bg_rectange_transparent_e6e6e6"
+                    android:paddingStart="@dimen/spacing_16dp"
+                    android:paddingEnd="@dimen/spacing_8dp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInterestPaymentDateTitle"
+                    tools:ignore="RtlCompat" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCalendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_12dp"
+                    android:padding="@dimen/spacing_4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_icon_awesome_calendar_alt"
+                    app:layout_constraintTop_toTopOf="@id/tvInterestPaymentDate"
+                    app:layout_constraintBottom_toBottomOf="@id/tvInterestPaymentDate"
+                    app:layout_constraintEnd_toEndOf="@id/tvInterestPaymentDate"/>
+                <CheckBox
+                    android:layout_marginStart="@dimen/spacing_8dp"
+                    android:id="@+id/cbPayBeforeMaturity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_18dp"
+                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvPayBeforeMaturity"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInterestPaymentDate" />
+                <TextView
+                    android:fontFamily="@font/roboto_regular"
+                    android:id="@+id/tvPayBeforeMaturity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/StyleTextViewMedium.Normal.Black"
+                    app:layout_constraintStart_toEndOf="@id/cbPayBeforeMaturity"
+                    app:layout_constraintTop_toTopOf="@id/cbPayBeforeMaturity"
+                    app:layout_constraintBottom_toBottomOf="@id/cbPayBeforeMaturity"
+                    android:text="@string/title_polity_pay_before_maturity"/>
+
+                <TextView
+                    android:id="@+id/tvEstimatedTimePaymentTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_estimated_time_payment_month"
+                    style="@style/StyleTextViewMedium.Medium.Black"
+                    android:layout_marginTop="@dimen/spacing_24dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    app:layout_constraintTop_toBottomOf="@id/cbPayBeforeMaturity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="gone"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edEstimatedTimePayment"
+                    style="@style/StyleTextViewMedium.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginTop="4dp"
+                    android:inputType="number"
+                    android:layout_marginEnd="@dimen/spacing_14dp"
+                    android:background="@drawable/bg_rectangle_fcfcfc_ebe0f6"
+                    android:paddingStart="@dimen/spacing_16dp"
+                    android:hint="@string/text_hint_enter_time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tvEstimatedTimePaymentTitle"
+                    tools:ignore="RtlSymmetry"/>
+
+                <TextView
+                    android:id="@+id/tvEarlyPaymentFeeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_early_payment_fee"
+                    style="@style/StyleTextViewMedium.Medium.Black"
+                    android:layout_marginTop="@dimen/spacing_24dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    app:layout_constraintTop_toBottomOf="@id/edEstimatedTimePayment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="gone"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edEarlyPaymentFee"
+                    style="@style/StyleTextViewMedium.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginTop="4dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginEnd="@dimen/spacing_14dp"
+                    android:background="@drawable/bg_rectangle_fcfcfc_ebe0f6"
+                    android:paddingStart="@dimen/spacing_16dp"
+                    android:hint="@string/text_hint_early_payment"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvEarlyPaymentFeeTitle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:visibility="gone"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_30dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLoan"
+                    style="@style/StyleTextViewMedium.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:layout_marginStart="@dimen/spacing_16dp"
+                    android:layout_marginTop="@dimen/spacing_10dp"
+                    android:layout_marginEnd="@dimen/spacing_16dp"
+                    android:layout_marginBottom="@dimen/spacing_30dp"
+                    android:background="@drawable/bg_rectange_c4_6d30ab"
+                    android:text="@string/text_next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>
+
+

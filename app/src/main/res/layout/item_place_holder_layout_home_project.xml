@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginEnd="@dimen/spacing_16dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvImage"
+        app:cardCornerRadius="@dimen/spacing_4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="175dp"
+        android:layout_height="127dp">
+
+        <View
+            android:id="@+id/viewDiscover"
+            android:background="@color/placeholder_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/tvProjectName"
+        android:layout_marginEnd="@dimen/spacing_30dp"
+        android:layout_marginTop="@dimen/spacing_12dp"
+        android:background="@color/placeholder_bg"
+        app:layout_constraintEnd_toEndOf="@id/cvImage"
+        app:layout_constraintStart_toStartOf="@id/cvImage"
+        app:layout_constraintTop_toBottomOf="@id/cvImage"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/spacing_12dp"/>
+    <View
+        android:id="@+id/viewType"
+        android:layout_marginTop="@dimen/spacing_6dp"
+        android:background="@color/placeholder_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/spacing_12dp"/>
+    <View
+        android:id="@+id/tvLocation"
+        android:layout_marginEnd="@dimen/spacing_30dp"
+        android:layout_marginTop="@dimen/spacing_6dp"
+        android:background="@color/placeholder_bg"
+        app:layout_constraintEnd_toEndOf="@id/cvImage"
+        app:layout_constraintStart_toStartOf="@id/cvImage"
+        app:layout_constraintTop_toBottomOf="@id/viewType"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/spacing_12dp"/>
+    <View
+        android:id="@+id/tvTime"
+        android:layout_marginEnd="@dimen/spacing_30dp"
+        android:layout_marginTop="@dimen/spacing_6dp"
+        android:background="@color/placeholder_bg"
+        app:layout_constraintEnd_toEndOf="@id/cvImage"
+        app:layout_constraintStart_toStartOf="@id/cvImage"
+        app:layout_constraintTop_toBottomOf="@id/tvLocation"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/spacing_12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

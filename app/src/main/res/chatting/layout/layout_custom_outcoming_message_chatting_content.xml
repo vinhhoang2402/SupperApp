@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:id="@+id/llContentMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rectange_c4_ffffff"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/civAvatarOutcoming"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMessageSender"
+            style="@style/StyleTextViewMedium.Normal.Black"
+            android:layout_gravity="end"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:paddingTop="@dimen/spacing_12dp"
+            app:layout_constraintHorizontal_bias="1"
+            tools:text="Nguyễn Anh Đào" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <vn.minerva.sale.func.chatting.screen.chatting.data.ClickableTextView
+                android:id="@+id/tvMessageContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="12dp"
+                android:textSize="14sp"
+                tools:text="Cho hỏi câu số 3 có ý nghĩa gì vậy bạn?" />
+
+            <vn.minerva.sale.func.chatting.screen.chatting.data.ClickableTextView
+                android:id="@+id/tvFileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingBottom="12dp"
+                android:textColor="@color/color_6d30ab"
+                android:textSize="14sp"
+                tools:text="Cho hỏi câu số 3 có ý nghĩa gì vậy bạn?" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFileType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                app:srcCompat="@drawable/ic_pdf_file"
+                tools:text="Nguyễn Anh Đào" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMessageTimeSent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/spacing_4dp"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/llContentMessage"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llContentMessage"
+        tools:text="Gửi lúc 1:45 PM" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civAvatarOutcoming"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_user_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

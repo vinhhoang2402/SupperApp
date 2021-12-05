@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_20dp"
+    android:layout_marginEnd="@dimen/spacing_20dp"
+    android:layout_marginBottom="@dimen/spacing_12dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="@dimen/spacing_10dp"
+        android:paddingTop="@dimen/spacing_14dp"
+        android:paddingEnd="@dimen/spacing_20dp"
+        android:paddingBottom="@dimen/spacing_14dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@id/glCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tvInfoTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitle"
+            app:srcCompat="@drawable/ic_product_joined_overview" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/StyleTextView.Normal.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_6dp"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgType"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Sản phẩm" />
+
+        <TextView
+            android:id="@+id/tvInfoTitle"
+            style="@style/StyleTextView.Medium.Red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="Căn hộ B6 - F01" />
+
+        <View
+            android:id="@+id/viewTop"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:background="@color/color_e8e8e8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvInfoTitle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tvInfoLeft"
+            app:layout_constraintEnd_toEndOf="@id/imgType"
+            app:layout_constraintStart_toStartOf="@id/imgType"
+            app:layout_constraintTop_toTopOf="@id/tvTitleLeft"
+            app:srcCompat="@drawable/ic_paper_join_overview" />
+
+        <TextView
+            android:id="@+id/tvTitleLeft"
+            style="@style/StyleTextView.Normal.696969"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_6dp"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintEnd_toStartOf="@id/glCenter"
+            app:layout_constraintStart_toEndOf="@id/imgType"
+            app:layout_constraintTop_toBottomOf="@id/viewTop"
+            tools:text="Mã hồ sơ" />
+
+        <TextView
+            android:id="@+id/tvInfoLeft"
+            style="@style/StyleTextView.Medium.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintEnd_toEndOf="@id/tvTitleLeft"
+            app:layout_constraintStart_toStartOf="@id/tvTitleLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleLeft"
+            tools:text="HS0938" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tvInfoRight"
+            app:layout_constraintStart_toEndOf="@id/glCenter"
+            app:layout_constraintTop_toTopOf="@id/tvTitleRight"
+            app:srcCompat="@drawable/ic_types_real_estate_joined_overview" />
+
+        <TextView
+            android:id="@+id/tvTitleRight"
+            style="@style/StyleTextView.Normal.696969"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_6dp"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgRight"
+            app:layout_constraintTop_toBottomOf="@id/viewTop"
+            tools:text="Loại" />
+
+        <TextView
+            android:id="@+id/tvInfoRight"
+            style="@style/StyleTextView.Medium.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintEnd_toEndOf="@id/tvTitleRight"
+            app:layout_constraintStart_toStartOf="@id/tvTitleRight"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleRight"
+            tools:text="Căn hộ" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tvInfoBottom"
+            app:layout_constraintEnd_toEndOf="@id/imgType"
+            app:layout_constraintStart_toStartOf="@id/imgType"
+            app:layout_constraintTop_toTopOf="@id/tvTitleBottom"
+            app:srcCompat="@drawable/ic_sales_agent_joined_overview" />
+
+        <TextView
+            android:id="@+id/tvTitleBottom"
+            style="@style/StyleTextView.Normal.696969"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_6dp"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintEnd_toStartOf="@id/glCenter"
+            app:layout_constraintStart_toEndOf="@id/imgType"
+            app:layout_constraintTop_toBottomOf="@id/tvInfoLeft"
+            tools:text="Đơn vị bán" />
+
+        <TextView
+            android:id="@+id/tvInfoBottom"
+            style="@style/StyleTextView.Medium.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintEnd_toEndOf="@id/tvTitleBottom"
+            app:layout_constraintStart_toStartOf="@id/tvTitleBottom"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleBottom"
+            tools:text="Đơn vị bán" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

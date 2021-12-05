@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<!--    <vn.minerva.sale.app.util.view.custom_seekbar.CustomSeekBarView-->
+<!--        android:id="@+id/dynamicSeekbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:csb_infoRadius="8"-->
+<!--        app:csb_infoTextColor="@color/color_6d30ab"-->
+<!--        app:csb_infoTextSize="12dp"-->
+<!--        app:csb_max="25"-->
+<!--        app:csb_min="1"-->
+<!--        app:csb_infoInputText="@string/text_progress_year"-->
+<!--        app:csb_progress="5"-->
+<!--        app:csb_textStart="1 nam"-->
+<!--        app:csb_textEnd="25 nam"/>-->
+
+<!--    <fragment android:name="com.google.ar.sceneform.ux.ArFragment"-->
+<!--        android:id="@+id/ux_fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+
+
+<!--    <fragment android:name="vn.minerva.sale.func.screen.bg_rectangle_e8e8e8.xml.AugmentedImageFragment"-->
+<!--        android:id="@+id/ux_fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/image_view_fit_to_scan"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:src="@drawable/fit_to_scan"-->
+<!--        android:contentDescription="@string/fit_image_to_scan"-->
+<!--        />-->
+
+</LinearLayout>

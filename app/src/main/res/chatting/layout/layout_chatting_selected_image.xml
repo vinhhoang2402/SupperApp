@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="80dp"
+        android:layout_height="@dimen/spacing_4dp"
+        android:layout_marginTop="@dimen/spacing_10dp"
+        android:background="@drawable/bg_rectange_c4_9167f1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btnCancel"
+        style="@style/StyleTextView.MediumLarge.Silver"
+        android:layout_marginStart="@dimen/spacing_20dp"
+        android:text="@string/ACTION_CANCEL"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/StyleTextViewMedium.SuperLarge.Black"
+        android:layout_marginTop="@dimen/spacing_10dp"
+        android:text="@string/text_choose_a_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewLine" />
+
+    <TextView
+        android:id="@+id/btnSave"
+        style="@style/StyleTextViewMedium.MediumLarge"
+        android:layout_marginEnd="@dimen/spacing_20dp"
+        android:text="@string/text_send"
+        android:textColor="@color/color_6d30ab"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/spacing_20dp"
+        android:layout_marginTop="@dimen/spacing_20dp"
+        android:layout_marginEnd="@dimen/spacing_20dp"
+        android:layout_marginBottom="@dimen/spacing_10dp"
+        app:layout_constraintBottom_toTopOf="@+id/clInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/spacing_8dp"
+        android:background="@drawable/bg_layout_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:id="@+id/lnImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/spacing_4dp"
+            android:layout_marginStart="@dimen/spacing_4dp"
+            android:background="@drawable/bg_rectange_c4_dad2ff"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                app:srcCompat="@drawable/ic_image_icon_chat"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvImageSize"
+                tools:text="x1"
+                style="@style/StyleTextView.Normal.Black"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtInput"
+            style="@style/StyleTextView.Normal.Black"
+            android:layout_width="0dp"
+            android:background="@null"
+            android:hint="@string/text_input_message_hint"
+            android:paddingStart="@dimen/spacing_16dp"
+            android:paddingTop="@dimen/spacing_8dp"
+            android:paddingEnd="@dimen/spacing_16dp"
+            android:paddingBottom="@dimen/spacing_8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSend"
+            app:layout_constraintStart_toEndOf="@+id/lnImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="@dimen/spacing_32dp"
+            android:layout_height="@dimen/spacing_32dp"
+            android:layout_marginTop="@dimen/spacing_4dp"
+            android:layout_marginEnd="@dimen/spacing_4dp"
+            android:layout_marginBottom="@dimen/spacing_2dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edtInput"
+            app:srcCompat="@drawable/ic_send_purple" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

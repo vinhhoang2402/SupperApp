@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/swRefresh"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="vn.minerva.sale.func.screen.project_home_news.ProjectNewsFragment">
+
+        <include
+            android:id="@+id/layoutToolbar"
+            layout="@layout/view_layout_toolbar_project_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewLineTop"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_aaaaaa"
+            app:layout_constraintBottom_toTopOf="@id/tabLayoutNews"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_aaaaaa"
+            app:layout_constraintBottom_toBottomOf="@id/tabLayoutNews"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayoutNews" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutNews"
+            style="@style/StyleTextView.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewLineTop"
+            app:tabGravity="center"
+            app:tabIndicator="@null"
+            app:tabInlineLabel="false"
+            app:tabMode="scrollable"
+            app:tabPaddingStart="@dimen/spacing_24dp"
+            app:tabSelectedTextColor="@color/color_6d30ab"
+            app:tabTextAppearance="@style/MyCustomTextAppearance.Medium"
+            app:tabTextColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/linearTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/spacing_20dp"
+            android:paddingTop="@dimen/spacing_22dp"
+            android:paddingBottom="@dimen/spacing_22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayoutNews">
+
+            <TextView
+                android:id="@+id/tvSortNew"
+                style="@style/StyleTextView.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/text_news_latest" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/spacing_14dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/spacing_6dp"
+                android:layout_marginEnd="@dimen/spacing_6dp"
+                android:background="@color/purple" />
+
+            <TextView
+                android:id="@+id/tvSortOld"
+                style="@style/StyleTextView.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/text_news_old" />
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerNews"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearTop"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

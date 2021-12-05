@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/view_layout_toolbar_project_home"
+        android:id="@+id/layoutToolbar"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCenter"
+        app:layout_constraintGuide_percent="0.68"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHorizontal"
+        app:layout_constraintGuide_percent="0.75"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottom"
+        app:layout_constraintGuide_percent="0.6"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/viewTop"
+        android:background="@color/silver"
+        app:layout_constraintTop_toBottomOf="@+id/layoutToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cvImageProjectGround"
+        app:layout_constraintTop_toBottomOf="@id/viewTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="@dimen/spacing_18dp"
+        android:layout_width="94dp"
+        android:layout_height="62dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/group_9269" />
+
+    <TextView
+        android:id="@+id/tvZone"
+        style="@style/StyleTextViewMedium.MediumLarge"
+        android:layout_marginEnd="@dimen/spacing_80dp"
+        android:textColor="@color/color_241f1f"
+        android:textAllCaps="true"
+        tools:text="CĂN HỘ KHU A "
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/cvImageProjectGround"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cvImageProjectGround"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvFloorTitle"
+        android:layout_marginTop="@dimen/spacing_5dp"
+        android:layout_marginEnd="@dimen/spacing_80dp"
+        style="@style/StyleTextView.Medium"
+        android:textColor="@color/color_241f1f"
+        android:paddingStart="@dimen/spacing_2dp"
+        android:text="Tầng trệt"
+        android:gravity="center"
+        android:singleLine="true"
+        app:layout_constraintStart_toEndOf="@id/cvImageProjectGround"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvZone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvImageProjectGround"
+        app:layout_constraintBottom_toTopOf="@id/glBottom"
+        android:id="@+id/imgProjectGround"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/group_11411"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintMid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/glCenter"
+        app:layout_constraintTop_toBottomOf="@id/glBottom"
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/spacing_20dp"
+        android:paddingEnd="@dimen/spacing_20dp"
+        android:paddingBottom="@dimen/spacing_16dp"
+        android:paddingTop="@dimen/spacing_16dp"
+        android:layout_height="0dp">
+
+        <View
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="@id/glLeft"
+            app:layout_constraintEnd_toEndOf="@id/glLeft"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="1dp"
+            android:layout_height="0dp"/>
+
+        <View
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="@id/glRight"
+            app:layout_constraintEnd_toEndOf="@id/glRight"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="1dp"
+            android:layout_height="0dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glLeft"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glRight"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            app:srcCompat="@drawable/ic_icon_selling"
+            android:id="@+id/imgSelling"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/totalSelling"
+            app:layout_constraintTop_toTopOf="@id/totalSelling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/totalSelling"
+            style="@style/StyleTextView.Normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/spacing_10dp"
+            android:text="@string/text_total_status_selling"
+            android:textColor="#0d0d0d"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/glLeft"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/imgSelling"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:paddingStart="@dimen/spacing_20dp"
+            app:srcCompat="@drawable/ic_icon_sold"
+            android:id="@+id/imgSelled"
+            app:layout_constraintStart_toEndOf="@id/glLeft"
+            app:layout_constraintBottom_toBottomOf="@id/totalSold"
+            app:layout_constraintTop_toTopOf="@id/totalSold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:paddingStart="@dimen/spacing_10dp"
+            android:text="@string/text_total_status_sold"
+            style="@style/StyleTextView.Normal"
+            android:textColor="#0d0d0d"
+            android:id="@+id/totalSold"
+            app:layout_constraintEnd_toStartOf="@id/glRight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgSelled"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:paddingStart="@dimen/spacing_20dp"
+            app:srcCompat="@drawable/ic_icon_booking"
+            android:id="@+id/imgBooking"
+            app:layout_constraintStart_toEndOf="@id/glRight"
+            app:layout_constraintBottom_toBottomOf="@id/totalBooking"
+            app:layout_constraintTop_toTopOf="@id/totalBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:paddingStart="@dimen/spacing_10dp"
+            android:text="@string/text_total_status_booking"
+            style="@style/StyleTextView.Normal"
+            android:textColor="#0d0d0d"
+            android:id="@+id/totalBooking"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgBooking"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/color_efefef"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/glHorizontal"
+        app:layout_constraintTop_toBottomOf="@id/glCenter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingStart="@dimen/spacing_30dp"
+            android:id="@+id/constraintBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glVertical"
+                app:layout_constraintGuide_percent="0.7"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                style="@style/StyleTextViewMedium.MediumLarge"
+                tools:text="Tầng trệt [2D]"
+                android:textColor="@color/color_241f1f"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tvFloor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:scaleType="fitXY"
+                android:id="@+id/imgTotalApartment"
+                android:background="@color/color_ebe0f6"
+                app:layout_constraintStart_toStartOf="@id/glVertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="36dp"
+                android:layout_height="36dp"/>
+
+            <TextView
+                style="@style/StyleTextView.Normal.Purple"
+                android:fontFamily="@font/roboto_medium"
+                tools:text="18"
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintEnd_toEndOf="@id/imgTotalApartment"
+                app:layout_constraintTop_toTopOf="@id/imgTotalApartment"
+                app:layout_constraintBottom_toBottomOf="@id/imgTotalApartment"
+                app:layout_constraintStart_toStartOf="@id/imgTotalApartment"
+                android:id="@+id/tvTotalApartment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                app:srcCompat="@drawable/ic_group_floor_purple"
+                android:id="@+id/imgChooseFloor"
+                app:layout_constraintStart_toEndOf="@id/imgTotalApartment"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProjectGroundDetail"
+        style="@style/MyCustomScrollBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/glHorizontal"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

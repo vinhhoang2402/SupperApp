@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_eeedef"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_loan"
+        layout="@layout/view_layout_toolbar_project_home" />
+
+    <View
+        android:id="@+id/vTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_a7a1a1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_eeedef"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/clPolicyLoanHeader"
+                layout="@layout/item_layout_policy_loan_header_vholder" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintImageBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_30dp"
+                android:layout_marginStart="@dimen/spacing_16dp"
+                android:layout_marginEnd="@dimen/spacing_16dp"
+                android:background="@drawable/bg_rectangle_29000000"
+                android:elevation="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvListBank"
+                    style="@style/StyleTextViewMedium.Medium.6D30AB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginTop="@dimen/spacing_20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/text_policy_loan_list_banks"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpagerImageBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingStart="@dimen/spacing_36dp"
+                    android:paddingEnd="@dimen/spacing_40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvListBank" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabDotsBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/spacing_4dp"
+                    android:paddingEnd="@dimen/spacing_4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewpagerImageBank"
+                    app:tabBackground="@drawable/custom_tab_dot_background"
+                    app:tabGravity="center"
+                    app:tabIndicator="@null"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabPaddingEnd="8dp"
+                    app:tabPaddingStart="8dp"
+                    app:tabRippleColor="@null" />
+
+                <TextView
+                    android:id="@+id/tvInfoLoan"
+                    style="@style/StyleTextViewMedium.Medium.6D30AB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginTop="@dimen/spacing_20dp"
+                    android:layout_marginBottom="@dimen/spacing_16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/text_policy_loan_loan_product_info"
+                    android:textAllCaps="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tabDotsBank"
+                    app:layout_constraintVertical_bias="0" />
+
+                <ImageButton
+                    android:id="@+id/ivInfoProductLoan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_18dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/spacing_4dp"
+                    android:src="@drawable/ic_caution"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintBottom_toBottomOf="@id/tvInfoLoan"
+                    app:layout_constraintStart_toEndOf="@id/tvInfoLoan"
+                    app:layout_constraintTop_toTopOf="@id/tvInfoLoan" />
+
+                <ImageButton
+                    android:id="@+id/ivInfoProductLoanBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_18dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/spacing_4dp"
+                    android:src="@drawable/ic_back_black"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintBottom_toBottomOf="@id/tvInfoLoan"
+                    app:layout_constraintStart_toEndOf="@id/tvInfoLoan"
+                    app:layout_constraintTop_toTopOf="@id/tvInfoLoan" />
+
+                <TextView
+                    android:id="@+id/tvInfoProductLoanTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginTop="@dimen/spacing_20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/text_info_product_loan_title"
+                    android:textColor="@color/color_241f1f"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@id/tvInfoProductLoanInterest"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvInfoLoan" />
+
+                <TextView
+                    android:id="@+id/tvInfoProductLoanInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginTop="@dimen/spacing_16dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/text_policy_loan_interest_rate"
+                    android:textColor="@color/color_241f1f"
+                    android:textSize="@dimen/text_16sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvInfoProductLoanTitle" />
+
+                <TextView
+                    android:id="@+id/tvInfoProductLoanPromotion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_14dp"
+                    android:layout_marginTop="@dimen/spacing_8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/text_policy_loan_promotion"
+                    android:textColor="@color/color_241f1f"
+                    android:textSize="@dimen/text_16sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvInfoProductLoanInterest" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvInfoProductLoanDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_26dp"
+                    android:layout_marginTop="@dimen/spacing_8dp"
+                    android:layout_marginEnd="@dimen/spacing_26dp"
+                    android:layout_marginBottom="@dimen/spacing_26dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="@dimen/text_24sp"
+                    android:text="@string/text_info_product_loan_description"
+                    android:textColor="@color/color_241f1f"
+                    android:textSize="@dimen/text_16sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvInfoProductLoanPromotion" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_16dp"
+                android:layout_marginTop="@dimen/spacing_16dp"
+                android:layout_marginEnd="@dimen/spacing_16dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraintImageBank">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clTabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:background="@drawable/bg_rectangle_29000000"
+                            app:layout_constraintBottom_toTopOf="@id/viewpagerMethodLoan"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tvMethodLoan"
+                                style="@style/StyleTextViewMedium.Medium.6D30AB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/spacing_14dp"
+                                android:layout_marginTop="@dimen/spacing_20dp"
+                                android:layout_marginBottom="@dimen/spacing_16dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="@string/text_policy_loan_loan_method"
+                                android:textAllCaps="true"
+                                app:layout_constraintBottom_toTopOf="@id/tvChooseMethodLoan"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvChooseMethodLoan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/spacing_14dp"
+                                android:layout_marginTop="@dimen/spacing_2dp"
+                                android:layout_marginBottom="@dimen/spacing_16dp"
+                                android:fontFamily="@font/roboto_italic"
+                                android:text="@string/text_policy_loan_choose_loan"
+                                android:textSize="@dimen/text_14sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tvMethodLoan" />
+
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tabLayoutMethodLoan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tvChooseMethodLoan"
+                                app:tabGravity="start"
+                                app:tabIndicator="@null"
+                                app:tabMode="scrollable"
+                                app:tabPaddingEnd="@dimen/spacing_12dp"
+                                app:tabRippleColor="@null" />
+
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tabDotsLoan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tabLayoutMethodLoan"
+                                app:tabBackground="@drawable/custom_tab_dot_background"
+                                app:tabGravity="center"
+                                app:tabIndicator="@null"
+                                app:tabPaddingEnd="8dp"
+                                app:tabPaddingStart="8dp"
+                                app:tabRippleColor="@null" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <vn.minerva.sale.func.screen.test.WrapContentHeightViewPager
+                            android:id="@+id/viewpagerMethodLoan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rectangle_29000000"
+                            android:paddingBottom="@dimen/spacing_20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clTabLayout" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_30dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLoan"
+                    style="@style/StyleTextViewMedium.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_40dp"
+                    android:layout_marginStart="@dimen/spacing_16dp"
+                    android:layout_marginTop="@dimen/spacing_10dp"
+                    android:layout_marginEnd="@dimen/spacing_16dp"
+                    android:layout_marginBottom="@dimen/spacing_30dp"
+                    android:background="@drawable/bg_rectange_c4_6d30ab"
+                    android:text="@string/text_next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+

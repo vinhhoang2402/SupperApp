@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/spacing_24dp"
+        android:paddingBottom="@dimen/spacing_24dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgAssigned"
+                android:layout_width="@dimen/text_36sp"
+                android:layout_height="@dimen/text_36sp"
+                android:layout_gravity="center"
+                android:src="@color/purple_light" />
+
+            <TextView
+                android:id="@+id/tvImgName"
+                style="@style/StyleTextView.Medium.Purple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textAllCaps="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvAssignedName"
+            style="@style/StyleTextView.Normal.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/spacing_16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="Nguyễn Anh Đào " />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVerticalDiscoverCity"
+        app:layout_constraintGuide_percent="0.8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <ImageView
+        android:id="@+id/imgStatus"
+        app:layout_constraintBottom_toTopOf="@+id/ivLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/glVerticalDiscoverCity"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_check_purple"
+        android:layout_width="@dimen/spacing_24dp"
+        android:layout_height="@dimen/spacing_24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/ivLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/silver" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

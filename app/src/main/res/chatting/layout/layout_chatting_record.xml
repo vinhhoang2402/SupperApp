@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <View
+        android:id="@+id/touchOutside"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent" />
+
+    <FrameLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/spacing_4dp"
+            android:orientation="vertical"
+            android:background="@color/color_f9f9f9"
+            tools:ignore="UselessParent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/miChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_8dp"
+                app:cardCornerRadius="@dimen/spacing_4dp"
+                app:layout_constraintBottom_toTopOf="@id/clRecord"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_layout_white">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtInput"
+                        style="@style/StyleTextView.Normal.Black"
+                        android:layout_width="0dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:hint="@string/text_input_message_hint"
+                        android:maxLines="3"
+                        android:textColorHint="@color/color_6d6d6d"
+                        android:paddingStart="@dimen/spacing_16dp"
+                        android:paddingTop="@dimen/spacing_8dp"
+                        android:paddingEnd="@dimen/spacing_16dp"
+                        android:paddingBottom="@dimen/spacing_8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ivAttach"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivRecord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/spacing_6dp"
+                        android:alpha="0.4"
+                        android:paddingStart="@dimen/spacing_6dp"
+                        android:paddingEnd="@dimen/spacing_6dp"
+                        android:src="@drawable/ic_record_gray"
+                        app:layout_constraintBottom_toBottomOf="@id/edtInput"
+                        app:layout_constraintEnd_toStartOf="@id/btnSend"
+                        app:layout_constraintStart_toEndOf="@id/ivCamera"
+                        app:layout_constraintTop_toTopOf="@id/edtInput" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivCamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:paddingStart="@dimen/spacing_6dp"
+                        android:paddingEnd="@dimen/spacing_6dp"
+                        android:src="@drawable/ic_camera_gray"
+                        app:layout_constraintBottom_toBottomOf="@id/edtInput"
+                        app:layout_constraintEnd_toStartOf="@id/ivRecord"
+                        app:layout_constraintStart_toEndOf="@id/ivAttach"
+                        app:layout_constraintTop_toTopOf="@id/edtInput" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAttach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:paddingStart="@dimen/spacing_6dp"
+                        android:paddingEnd="@dimen/spacing_6dp"
+                        android:src="@drawable/ic_attach_gray"
+                        app:layout_constraintBottom_toBottomOf="@id/edtInput"
+                        app:layout_constraintEnd_toStartOf="@id/ivCamera"
+                        app:layout_constraintStart_toEndOf="@id/edtInput"
+                        app:layout_constraintTop_toTopOf="@id/edtInput" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btnSend"
+                        android:layout_width="@dimen/spacing_32dp"
+                        android:layout_height="@dimen/spacing_32dp"
+                        android:layout_marginTop="@dimen/spacing_4dp"
+                        android:layout_marginEnd="@dimen/spacing_4dp"
+                        android:clickable="false"
+                        android:layout_marginBottom="@dimen/spacing_2dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivRecord"
+                        app:srcCompat="@drawable/ic_send_purple" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rectange_tr_tl_4_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRecordTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_40dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/text_start_timer_record"
+                    style="@style/StyleTextView.Medium.Black"
+                    android:layout_marginBottom="@dimen/spacing_40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/btnSendRecord"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:id="@+id/glStart"
+                    app:layout_constraintGuide_percent="0.1" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:id="@+id/glEnd"
+                    app:layout_constraintGuide_percent="0.9" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_30dp"
+                    android:background="@drawable/bg_rectange_c4_f5f5f5"
+                    android:text="@string/text_cancel"
+                    style="@style/StyleTextView.Small.Black"
+                    android:layout_marginEnd="@dimen/spacing_14dp"
+                    android:layout_marginBottom="@dimen/spacing_14dp"
+                    app:layout_constraintStart_toStartOf="@+id/glStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnSendRecord"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSendRecord"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_14dp"
+                    android:background="@drawable/bg_rectange_4dp_6d30ab_6b31ad_4a3bcc"
+                    android:text="@string/text_record"
+                    style="@style/StyleTextView.Small.White"
+                    app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnCancel"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

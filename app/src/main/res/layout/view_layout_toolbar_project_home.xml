@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clToolbar"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8dp"
+        android:padding="@dimen/spacing_8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="@id/tvTitleScreen"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitleScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_back_white" />
+
+    <TextView
+        android:id="@+id/tvTitleScreen"
+        style="@style/StyleTextView.Huge.White"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_10dp"
+        android:layout_marginBottom="@dimen/spacing_5dp"
+        android:layout_marginStart="@dimen/spacing_6dp"
+        android:layout_marginEnd="@dimen/spacing_6dp"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintEnd_toStartOf="@+id/imgCall"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvProjectName"
+        tools:text="Trang chủ" />
+
+    <TextView
+        android:id="@+id/tvProjectName"
+        style="@style/StyleTextViewMedium.MediumLarge.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginBottom="@dimen/spacing_6dp"
+        android:layout_marginEnd="@dimen/spacing_6dp"
+        app:layout_constraintStart_toStartOf="@id/tvTitleScreen"
+        app:layout_constraintEnd_toStartOf="@id/imgCall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Dự án VTP" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imgCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_22dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="@+id/imgMessage"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMessage"
+        app:layout_constraintEnd_toStartOf="@id/imgMessage"
+        app:srcCompat="@drawable/ic_call_red" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imgMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_4dp"
+        android:layout_marginEnd="@dimen/spacing_20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="@+id/tvTitleScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:srcCompat="@drawable/ic_text_green" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

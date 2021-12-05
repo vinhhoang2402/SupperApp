@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/spacing_8dp"
+    android:padding="@dimen/spacing_8dp"
+    android:background="?attr/selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvImage"
+        android:layout_width="220dp"
+        android:layout_height="127dp"
+        app:cardCornerRadius="@dimen/spacing_6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgProject"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.3" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/imgSell"
+                android:layout_width="72dp"
+                android:layout_height="@dimen/spacing_24dp"
+                app:layout_constraintBottom_toTopOf="@id/glHorizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_sell" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSell"
+                style="@style/StyleTextView.Small.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:paddingEnd="@dimen/spacing_4dp"
+                tools:text="Đang bán"
+                app:layout_constraintBottom_toBottomOf="@id/imgSell"
+                app:layout_constraintEnd_toEndOf="@id/imgSell"
+                app:layout_constraintStart_toStartOf="@id/imgSell"
+                app:layout_constraintTop_toTopOf="@id/imgSell" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProjectName"
+        style="@style/StyleTextView.MediumLarge.6D30AB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_12dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvImage"
+        tools:text="Royal Garden" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvContent"
+        style="@style/StyleTextView.SupperSmall.AAAAAA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_2dp"
+        android:fontFamily="@font/roboto_light_italic"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectName"
+        tools:text="Chung cư cao cấp | Trung tâm thương…" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvLocation"
+        app:srcCompat="@drawable/ic_location_blue" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocation"
+        style="@style/StyleTextView.Normal.404B69"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_4dp"
+        android:layout_marginTop="@dimen/spacing_5dp"
+        android:fontFamily="@font/roboto_regular"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgLocation"
+        app:layout_constraintTop_toBottomOf="@id/tvContent"
+        tools:text="Quận 7, TPHCM" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTime"
+        app:srcCompat="@drawable/ic_time_blue" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTime"
+        style="@style/StyleTextView.Normal.404B69"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_4dp"
+        android:layout_marginTop="@dimen/spacing_6dp"
+        android:fontFamily="@font/roboto_regular"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgTime"
+        app:layout_constraintTop_toBottomOf="@id/tvLocation"
+        tools:text="Quý 4/2020" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/clShowLess"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_6dp"
+    android:background="@color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:id="@+id/tvShowLess"
+        style="@style/StyleTextView.Medium.404B69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/find_text_thu_gon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="@dimen/spacing_4dp"
+        android:id="@+id/ivShowLess1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_double_angle_pointing_to_top"
+        app:layout_constraintEnd_toEndOf="@id/tvShowLess"
+        app:layout_constraintStart_toStartOf="@id/tvShowLess"
+        app:layout_constraintTop_toBottomOf="@id/tvShowLess" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

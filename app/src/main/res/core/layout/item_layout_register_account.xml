@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_register">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clViewLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_18dp"
+        android:layout_marginEnd="@dimen/spacing_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glTop"
+        app:layout_constraintVertical_bias="0">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRegisterWellCome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:lineSpacingExtra="@dimen/text_32sp"
+            android:text="@string/text_well_come_register"
+            android:textColor="@color/black_text"
+            android:textSize="@dimen/text_26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/ivBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/spacing_6dp"
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRegisterWellCome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvRegisterWellCome"
+            app:srcCompat="@drawable/ic_back_black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRegisterWellComeSystem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:lineSpacingExtra="@dimen/text_18sp"
+            android:text="@string/text_well_come_register_system"
+            android:textColor="@color/color_404b69"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_78dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRegisterWellComeSystem">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivUserAccountRegister"
+                android:layout_width="@dimen/spacing_18dp"
+                android:layout_height="@dimen/spacing_18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/edUserName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edUserName"
+                app:srcCompat="@drawable/ic_register_user" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edUserName"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_20dp"
+                android:layout_marginStart="@dimen/spacing_14dp"
+                android:background="?attr/selectableItemBackground"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/text_email_hint_star"
+                android:inputType="textNoSuggestions"
+                android:lineSpacingExtra="@dimen/text_18sp"
+                android:textColorHint="@color/color_a7a1a1"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintBottom_toTopOf="@id/llViewUser"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/ivUserAccountRegister"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRemoveUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/edUserName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edUserName"
+                app:srcCompat="@drawable/ic_error" />
+
+            <View
+                android:id="@+id/llViewUser"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_2dp"
+                android:layout_marginTop="@dimen/spacing_10dp"
+                android:background="@color/color_404b69"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edUserName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotifyUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/text_notify_user_name"
+                android:textColor="@color/color_ee403f"
+                android:textSize="@dimen/text_14sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llViewUser" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPassWorld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clUserName">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPasswordRegister"
+                android:layout_width="@dimen/spacing_18dp"
+                android:layout_height="@dimen/spacing_18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/edPasswordRegister"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edPasswordRegister"
+                app:srcCompat="@drawable/ic_pass_padlock" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edPasswordRegister"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_20dp"
+                android:layout_marginStart="@dimen/spacing_14dp"
+                android:background="@null"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/text_pass_register"
+                android:inputType="textPassword"
+                android:lineSpacingExtra="@dimen/text_18sp"
+                android:paddingEnd="@dimen/spacing_26dp"
+                android:textColorHint="@color/color_a7a1a1"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintBottom_toTopOf="@+id/llNotifyPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ivPasswordRegister"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRemovePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_26dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/edPasswordRegister"
+                app:layout_constraintEnd_toStartOf="@+id/ivShowPassword"
+                app:layout_constraintTop_toTopOf="@+id/edPasswordRegister"
+                app:srcCompat="@drawable/ic_error" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivShowPassword"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/edPasswordRegister"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edPasswordRegister"
+                app:srcCompat="@drawable/ic_show_pass_register" />
+
+            <View
+                android:id="@+id/llNotifyPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_2dp"
+                android:layout_marginTop="@dimen/spacing_10dp"
+                android:background="@color/color_404b69"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edPasswordRegister" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotifyPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/text_notify_password"
+                android:textColor="@color/color_ee403f"
+                android:textSize="@dimen/text_14sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llNotifyPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swSaveRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_26dp"
+            android:checked="false"
+            android:thumb="@drawable/ic_dot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clPassWorld"
+            app:track="@drawable/bg_switch_on_off" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSaveRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:lineSpacingExtra="@dimen/text_3sp"
+            android:text="@string/text_save_login_register"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/swSaveRegister"
+            app:layout_constraintStart_toEndOf="@+id/swSaveRegister"
+            app:layout_constraintTop_toTopOf="@+id/swSaveRegister" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_34dp"
+            android:background="@drawable/bg_button_sale_pocily"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/text_bt_login_register"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swSaveRegister" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_18dp"
+            android:fontFamily="@font/roboto_italic"
+            android:text="@string/text_forgot_password"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/text_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btLogin" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotAMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingExtra="@dimen/text_18sp"
+                android:text="@string/text_not_a_member"
+                android:textColor="@color/color_404b69"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvRegisterNow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:background="?attr/selectableItemBackground"
+                android:paddingStart="@dimen/spacing_4dp"
+                android:id="@+id/tvRegisterNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/text_register_now"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvNotAMember"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

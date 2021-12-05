@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_14dp"
+    android:layout_marginEnd="@dimen/spacing_14dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_4dp">
+
+    <LinearLayout
+        android:id="@+id/llContentMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8dp"
+        android:background="@drawable/bg_rectange_c4_ffffff"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_10dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/civAvatarIncoming"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMessageSender"
+            style="@style/StyleTextViewMedium.Normal.Black"
+            android:layout_marginBottom="@dimen/spacing_4dp"
+            tools:text="Nguyễn Anh Đào" />
+
+        <LinearLayout
+            android:id="@+id/lnFile"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFileType"
+                tools:text="Nguyễn Anh Đào"
+                app:srcCompat="@drawable/ic_pdf_file"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvFileName"
+                android:layout_marginStart="@dimen/spacing_10dp"
+                style="@style/StyleTextView.Small"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_gravity="center|start"
+                android:textColor="@color/color_6d30ab"
+                tools:text="Cho hỏi câu sdsa dsa dsa "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMessageTimeSent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        style="@style/StyleTextView.SupperSmall"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/spacing_4dp"
+        android:fontFamily="@font/roboto_italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/llContentMessage"
+        app:layout_constraintTop_toBottomOf="@id/llContentMessage"
+        tools:text="Gửi lúc 1:45 PM" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civAvatarIncoming"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_user_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

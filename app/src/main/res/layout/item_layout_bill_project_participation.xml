@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_20dp"
+    android:layout_marginEnd="@dimen/spacing_20dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <TextView
+            android:id="@+id/tvIndex"
+            style="@style/StyleTextViewMedium.Normal.White"
+            android:layout_width="@dimen/spacing_30dp"
+            android:layout_height="@dimen/spacing_30dp"
+            android:background="@drawable/bg_circle_4a3bcc_6d30ab"
+            android:gravity="center"
+            tools:text="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/glStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNameApartment"
+            style="@style/StyleTextViewMedium.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:maxLines="1"
+            tools:text="Căn hộ B6 - F1.01"
+            android:textColor="@color/color_ee403f"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/glStart"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:background="@color/color_f6f2ff"
+            android:layout_width="@dimen/spacing_65dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvNameApartment"
+            app:layout_constraintStart_toEndOf="@id/glStart"
+            app:layout_constraintBottom_toTopOf="@id/tvTitlePrice"/>
+
+        <ImageView
+            android:id="@+id/ivPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_money"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitlePrice"
+            app:layout_constraintStart_toEndOf="@id/glStart"
+            app:layout_constraintTop_toBottomOf="@id/tvNameApartment"
+            app:layout_constraintTop_toTopOf="@id/tvTitlePrice" />
+
+        <TextView
+            android:id="@+id/tvTitlePrice"
+            style="@style/StyleTextView.Normal.241F1F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_8dp"
+            android:layout_marginTop="@dimen/spacing_12dp"
+            android:text="@string/text_price_of_money"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/ivPrice"
+            app:layout_constraintTop_toBottomOf="@id/tvNameApartment" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            style="@style/StyleTextViewMedium.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_26dp"
+            android:text="@string/text_3_000_000_000"
+            android:textColor="@color/color_6d30ab"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitlePrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitlePrice" />
+
+        <TextView
+            android:id="@+id/tvDongOfPrice"
+            style="@style/StyleTextViewMedium.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_14dp"
+            android:layout_marginBottom="@dimen/spacing_8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/text_d"
+            android:textColor="@color/color_6d30ab"
+            app:layout_constraintBottom_toBottomOf="@id/tvPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvPrice" />
+
+        <ImageView
+            android:id="@+id/ivMoneyPaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_apartment_payment"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitleMoneyPaid"
+            app:layout_constraintStart_toEndOf="@id/glStart"
+            app:layout_constraintTop_toBottomOf="@id/ivPrice"
+            app:layout_constraintTop_toTopOf="@id/tvTitleMoneyPaid" />
+
+        <TextView
+            android:id="@+id/tvTitleMoneyPaid"
+            style="@style/StyleTextView.Normal.241F1F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_8dp"
+            android:layout_marginTop="@dimen/spacing_4dp"
+            android:layout_marginBottom="@dimen/spacing_10dp"
+            android:text="@string/text_money_payment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/ivMoneyPaid"
+            app:layout_constraintTop_toBottomOf="@id/tvTitlePrice" />
+
+        <TextView
+            android:id="@+id/tvMoneyPaid"
+            style="@style/StyleTextViewMedium.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_26dp"
+            tools:text="1.500.000.000"
+            android:textColor="@color/color_6d30ab"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitleMoneyPaid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitleMoneyPaid" />
+
+        <TextView
+            android:id="@+id/tvDongOfMoneyPaid"
+            style="@style/StyleTextViewMedium.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_14dp"
+            android:layout_marginBottom="@dimen/spacing_8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/text_d"
+            android:textColor="@color/color_6d30ab"
+            app:layout_constraintBottom_toBottomOf="@id/tvMoneyPaid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvMoneyPaid" />
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/spacing_12dp"
+            android:layout_marginEnd="@dimen/spacing_8dp"
+            android:background="@color/color_e6e6e6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/glStart"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleMoneyPaid" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

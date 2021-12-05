@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/layoutToolbarContact"
+        layout="@layout/view_layout_toolbar_project_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_2dp"
+        android:background="@color/color_aaaaaa"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutToolbarContact" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutToolbarContact">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvIntroduce"
+                style="@style/StyleTextView.Normal.241F1F"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_56dp"
+                android:layout_marginTop="@dimen/spacing_50dp"
+                android:layout_marginEnd="@dimen/spacing_56dp"
+                android:fontFamily="@font/roboto_italic"
+                android:gravity="center"
+                android:text="@string/text_notification_call_you"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCall"
+                style="@style/StyleTextView.Large.Purple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/text_phone_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIntroduce" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_46dp"
+                android:layout_marginTop="@dimen/spacing_36dp"
+                android:layout_marginEnd="@dimen/spacing_46dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCall">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="293dp" />
+
+                <TextView
+                    android:id="@+id/tvContactLabelName"
+                    style="@style/StyleTextView.Medium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/text_label_name"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edContactName"
+                    style="@style/StyleTextView.Medium.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_18dp"
+                    android:background="@color/color_006d30ab"
+                    android:fontFamily="@font/roboto_italic"
+                    android:hint="@string/text_hint_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/color_aaaaaa"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/glName"
+                    app:layout_constraintStart_toEndOf="@id/tvContactLabelName"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgContactRemoveName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/edContactName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/glName"
+                    app:layout_constraintTop_toTopOf="@id/edContactName"
+                    app:srcCompat="@drawable/ic_remove_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvErrorName"
+                style="@style/StyleTextView.Normal.EE403F"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_8dp"
+                android:gravity="end"
+                android:text="@string/text_error_name_member"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/clName"
+                app:layout_constraintStart_toStartOf="@id/clName"
+                app:layout_constraintTop_toBottomOf="@id/viewContactLineBottomName" />
+
+            <View
+                android:id="@+id/viewContactLineBottomName"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/spacing_12dp"
+                android:background="@color/color_aaaaaa"
+                app:layout_constraintEnd_toEndOf="@id/clName"
+                app:layout_constraintStart_toStartOf="@id/clName"
+                app:layout_constraintTop_toBottomOf="@+id/clName" />
+
+            <TextView
+                android:id="@+id/tvContactErrorUsername"
+                style="@style/StyleTextView.Normal.F8CBCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_italic"
+                android:text="@string/text_warning_empty"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/viewContactLineBottomName"
+                app:layout_constraintTop_toBottomOf="@id/viewContactLineBottomName" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_46dp"
+                android:layout_marginTop="@dimen/spacing_24dp"
+                android:layout_marginEnd="@dimen/spacing_46dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvErrorName">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="32dp" />
+
+                <TextView
+                    android:id="@+id/tvContactNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/text_label_phone_number"
+                    style="@style/StyleTextView.Medium.Black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/StyleTextView.Medium.Black"
+                    android:id="@+id/edContactNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_18dp"
+                    android:background="@color/color_006d30ab"
+                    android:fontFamily="@font/roboto_italic"
+                    android:hint="@string/text_hint_phone_number"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColorHint="@color/color_aaaaaa"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/glNumber"
+                    app:layout_constraintStart_toEndOf="@id/tvContactNumber"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgContactRemoveNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/glNumber"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_remove_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/viewContactLineBottomNumber"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/spacing_12dp"
+                android:background="@color/color_aaaaaa"
+                app:layout_constraintEnd_toEndOf="@id/clName"
+                app:layout_constraintStart_toStartOf="@id/clNumber"
+                app:layout_constraintTop_toBottomOf="@+id/clNumber" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvErrorPhoneNumber"
+                style="@style/StyleTextView.Normal.EE403F"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_8dp"
+                android:gravity="end"
+                android:text="@string/text_error_name_member"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/clName"
+                app:layout_constraintStart_toStartOf="@id/clName"
+                app:layout_constraintTop_toBottomOf="@id/viewContactLineBottomNumber" />
+
+            <TextView
+                android:id="@+id/tvContactErrorNumber"
+                style="@style/StyleTextView.Normal.F8CBCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_italic"
+                android:text="@string/text_warning_empty"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/viewContactLineBottomNumber"
+                app:layout_constraintTop_toBottomOf="@id/viewContactLineBottomNumber" />
+
+            <Button
+                android:id="@+id/btRegisterContact"
+                style="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/spacing_40dp"
+                android:background="@drawable/bg_button_sale_pocily"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/text_bt_register_sale_contact"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18sp"
+                app:layout_constraintEnd_toEndOf="@id/viewContactLineBottomNumber"
+                app:layout_constraintStart_toStartOf="@id/viewContactLineBottomNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tvErrorPhoneNumber" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRegisterAp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_2dp"
+                android:background="@color/silver"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/StyleTextView.LowHuge.Black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_50dp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/spacing_20dp"
+                android:text="@string/text_title_register_contract_success"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvThankyou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_20dp"
+                android:layout_marginTop="@dimen/spacing_20dp"
+                android:layout_marginEnd="@dimen/spacing_20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingExtra="@dimen/text_8sp"
+                android:text="@string/text_thank_you_sale_pocily_contact"
+                android:textColor="#241f1f"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvThankyou"
+                app:srcCompat="@drawable/ic_img_group_phone_12557" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btBackSalePolicyContack"
+                style="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_36dp"
+                android:layout_marginTop="@dimen/spacing_40dp"
+                android:layout_marginEnd="@dimen/spacing_36dp"
+                android:background="@drawable/bg_rectangle_c4_ffffff_stroke_6d30ab"
+                android:text="@string/text_bt_back_contact"
+                android:textAllCaps="false"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivPhone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

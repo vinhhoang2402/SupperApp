@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/spacing_20dp"
+    android:layout_height="@dimen/spacing_6dp"
+    android:background="@drawable/bg_rectangle_6d30ab"/>

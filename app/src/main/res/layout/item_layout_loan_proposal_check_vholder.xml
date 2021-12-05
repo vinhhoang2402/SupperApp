@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="4dp"
+    android:background="@color/white">
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:paddingStart="@dimen/spacing_8dp"
+        android:id="@+id/btnCheck"
+        style="@style/StyleTextView.Normal.696969"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_9dp"
+        android:layout_marginBottom="@dimen/spacing_9dp"
+        android:layout_marginStart="@dimen/spacing_14dp"
+        android:layout_marginEnd="@dimen/spacing_14dp"
+        android:button="@drawable/bg_checkbox_sale_policy_collateral"
+        android:text="@string/text_collateral_cars_or_machinery" />
+
+</androidx.cardview.widget.CardView>

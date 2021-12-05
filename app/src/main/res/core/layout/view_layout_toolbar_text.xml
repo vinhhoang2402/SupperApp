@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/background_project"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/btnCancel"
+        style="@style/StyleTextView.MediumLarge.Silver"
+        android:padding="@dimen/spacing_6dp"
+        android:layout_marginStart="@dimen/spacing_12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:text="@string/text_cancel"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/StyleTextViewMedium.Large.Black"
+        android:layout_width="0dp"
+        android:textAlignment="center"
+        android:paddingStart="@dimen/spacing_6dp"
+        android:paddingEnd="@dimen/spacing_6dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text="@string/text_title_work_description"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        app:layout_constraintEnd_toStartOf="@id/btnSave"/>
+
+    <TextView
+        android:id="@+id/btnSave"
+        style="@style/StyleTextViewMedium.MediumLarge.Purple"
+        android:padding="@dimen/spacing_6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginEnd="@dimen/spacing_12dp"
+        android:text="@string/text_save"
+        app:layout_constraintStart_toEndOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

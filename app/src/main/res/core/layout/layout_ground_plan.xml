@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_not_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/view_layout_toolbar_project_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/btTheElite"
+        android:layout_width="142dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="@dimen/spacing_22dp"
+        android:layout_marginTop="154dp"
+        android:background="@color/white"
+        android:text="THE ELITE"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btTheStella"
+        android:layout_width="142dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="57.6dp"
+        android:layout_marginTop="180dp"
+        android:background="@color/white"
+        android:text="THE STELLA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btTheElite" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

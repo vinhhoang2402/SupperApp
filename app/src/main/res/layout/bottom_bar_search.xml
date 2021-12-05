@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.SearchView
+        app:closeIcon="@drawable/ic_remove_search"
+        app:layout_constraintCircleRadius="@dimen/spacing_4dp"
+        android:id="@+id/searchView"
+        android:layout_width="@dimen/spacing_327"
+        android:layout_height="@dimen/spacing_44dp"
+        android:layout_marginStart="@dimen/spacing_16dp"
+        android:layout_marginTop="@dimen/spacing_42dp"
+        android:background="@color/color_f9f6f6"
+        app:iconifiedByDefault="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="Tìm kiếm dự án" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOfserch"
+        style="@style/StyleTextViewMedium.Medium.333333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_27sdp"
+        android:text="Tắt"
+        android:textSize="@dimen/text_16sp"
+        app:layout_constraintBottom_toBottomOf="@id/searchView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/searchView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:visibility="invisible"
+        android:id="@+id/ivOnsearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/searchView"
+        app:layout_constraintBottom_toBottomOf="@id/searchView"
+        app:layout_constraintTop_toTopOf="@id/searchView"
+        app:srcCompat="@drawable/ic_search_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginStart="@dimen/spacing_10dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivOnsearch"
+        app:layout_constraintStart_toEndOf="@id/ivOnsearch"
+        app:layout_constraintTop_toTopOf="@id/ivOnsearch"
+        android:id="@+id/ic_filter"
+        app:srcCompat="@drawable/ic_filter_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginStart="@dimen/spacing_20dp"
+        android:id="@+id/icGetback"
+        android:layout_width="@dimen/spacing_20dp"
+        android:layout_height="@dimen/spacing_14dp"
+        android:layout_marginLeft="@dimen/spacing_10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvResult"
+        app:srcCompat="@drawable/ic_back_black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvResult"
+        style="@style/StyleTextViewMedium.Medium.333333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_14dp"
+        android:layout_marginTop="@dimen/spacing_8dp"
+        android:text="Kết quả lọc"
+        android:textSize="@dimen/text_24sp"
+        app:layout_constraintStart_toEndOf="@id/icGetback"
+        app:layout_constraintTop_toBottomOf="@id/searchView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

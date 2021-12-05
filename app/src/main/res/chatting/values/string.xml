@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_write_new_message"><u>Write new message</u></string>
+    <string name="text_select_image_with">Chọn ảnh theo</string>
+    <string name="text_message_sent_time">Gửi lúc %s</string>
+    <string name="text_input_message_hint">Viết tin nhắn mới …</string>
+    <string name="text_add_member">Thêm thành viên</string>
+    <string name="text_send_message">Gửi tin nhắn</string>
+    <string name="text_new_message">Tin nhắn mới</string>
+    <string name="text_project_highlight_title">Các dự án nổi bật</string>
+    <string name="text_not_open_file">Could not open this file</string>
+    <string name="text_error_selected_images">Vui lòng chọn ít nhất 1 ảnh</string>
+    <string name="text_start_timer_record" translatable="false">00:00</string>
+    <string name="text_record">Record</string>
+    <string name="text_title_chat_profile" translatable="false">%s (%d)</string>
+</resources>

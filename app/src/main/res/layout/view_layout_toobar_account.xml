@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/spacing_10dp"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        style="@style/StyleTextView.Huge.Black"
+        android:text="@string/text_account"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginStart="@dimen/spacing_12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tvTitleScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_2dp"
+        android:layout_marginTop="@dimen/spacing_5dp"
+        android:layout_marginEnd="@dimen/spacing_15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_icon_cart" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:visibility="gone"
+        android:id="@+id/imgNotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_2dp"
+        android:layout_marginEnd="@dimen/spacing_15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@id/imgCart"
+        app:layout_constraintEnd_toStartOf="@id/imgCart"
+        app:layout_constraintTop_toTopOf="@id/imgCart"
+        app:srcCompat="@drawable/ic_notification_home" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:visibility="gone"
+        android:id="@+id/ivTotalNotify"
+        android:src="@color/purple"
+        app:layout_constraintCircle="@id/imgNotify"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="10dp"
+        app:layout_constraintStart_toEndOf="@id/imgNotify"
+        app:layout_constraintTop_toTopOf="@id/imgNotify"
+        app:layout_constraintEnd_toEndOf="@id/imgNotify"
+        android:layout_width="@dimen/spacing_16dp"
+        android:layout_height="@dimen/spacing_16dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:visibility="gone"
+        android:id="@+id/tvTotalNotify"
+        style="@style/StyleTextView.SupperSmallX.White"
+        android:fontFamily="@font/roboto_bold"
+        tools:text="9+"
+        app:layout_constraintEnd_toEndOf="@id/ivTotalNotify"
+        app:layout_constraintStart_toStartOf="@id/ivTotalNotify"
+        app:layout_constraintBottom_toBottomOf="@id/ivTotalNotify"
+        app:layout_constraintTop_toTopOf="@id/ivTotalNotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivTotalItem"
+        android:src="@color/color_e94c4c"
+        app:layout_constraintStart_toEndOf="@id/imgCart"
+        app:layout_constraintTop_toTopOf="@id/imgCart"
+        app:layout_constraintEnd_toEndOf="@id/imgCart"
+        android:layout_width="@dimen/spacing_16dp"
+        android:layout_height="@dimen/spacing_16dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTotalItem"
+        style="@style/StyleTextView.SupperSmallX.White"
+        android:fontFamily="@font/roboto_bold"
+        tools:text="9+"
+        app:layout_constraintEnd_toEndOf="@id/ivTotalItem"
+        app:layout_constraintStart_toStartOf="@id/ivTotalItem"
+        app:layout_constraintBottom_toBottomOf="@id/ivTotalItem"
+        app:layout_constraintTop_toTopOf="@id/ivTotalItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

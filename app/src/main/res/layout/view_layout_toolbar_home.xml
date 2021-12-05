@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:paddingTop="@dimen/spacing_10dp"
+    android:paddingBottom="@dimen/spacing_10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_5dp"
+        android:layout_marginStart="@dimen/spacing_15dp"
+        android:layout_marginTop="@dimen/spacing_5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_map_black" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_5dp"
+        android:layout_marginStart="@dimen/spacing_24dp"
+        android:layout_marginTop="@dimen/spacing_5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgMap"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_filter_black" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_2dp"
+        android:layout_marginTop="@dimen/spacing_5dp"
+        android:layout_marginEnd="@dimen/spacing_15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_icon_cart" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:visibility="gone"
+        android:id="@+id/imgNotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_2dp"
+        android:layout_marginEnd="@dimen/spacing_15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@id/imgCart"
+        app:layout_constraintEnd_toStartOf="@id/imgCart"
+        app:layout_constraintTop_toTopOf="@id/imgCart"
+        app:srcCompat="@drawable/ic_notification_home" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:visibility="gone"
+        android:id="@+id/ivTotalNotify"
+        android:src="@color/purple"
+        app:layout_constraintCircle="@id/imgNotify"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="10dp"
+        app:layout_constraintStart_toEndOf="@id/imgNotify"
+        app:layout_constraintTop_toTopOf="@id/imgNotify"
+        app:layout_constraintEnd_toEndOf="@id/imgNotify"
+        android:layout_width="@dimen/spacing_16dp"
+        android:layout_height="@dimen/spacing_16dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:visibility="gone"
+        android:id="@+id/tvTotalNotify"
+        style="@style/StyleTextView.SupperSmallX.White"
+        android:fontFamily="@font/roboto_bold"
+        tools:text="9+"
+        app:layout_constraintEnd_toEndOf="@id/ivTotalNotify"
+        app:layout_constraintStart_toStartOf="@id/ivTotalNotify"
+        app:layout_constraintBottom_toBottomOf="@id/ivTotalNotify"
+        app:layout_constraintTop_toTopOf="@id/ivTotalNotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivTotalItem"
+        android:src="@color/color_e94c4c"
+        app:layout_constraintStart_toEndOf="@id/imgCart"
+        app:layout_constraintTop_toTopOf="@id/imgCart"
+        app:layout_constraintEnd_toEndOf="@id/imgCart"
+        android:layout_width="@dimen/spacing_16dp"
+        android:layout_height="@dimen/spacing_16dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTotalItem"
+        style="@style/StyleTextView.SupperSmallX.White"
+        android:fontFamily="@font/roboto_bold"
+        tools:text="9+"
+        app:layout_constraintEnd_toEndOf="@id/ivTotalItem"
+        app:layout_constraintStart_toStartOf="@id/ivTotalItem"
+        app:layout_constraintBottom_toBottomOf="@id/ivTotalItem"
+        app:layout_constraintTop_toTopOf="@id/ivTotalItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

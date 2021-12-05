@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="5dp"
+    android:orientation="horizontal"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:weightSum="5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llContentMessage"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rectange_c4_ffffff"
+        app:layout_constraintStart_toEndOf="@id/civAvatarIncoming"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMessageSender"
+            tools:text="Nguyễn Anh Đào"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:paddingTop="@dimen/spacing_12dp"
+            style="@style/StyleTextViewMedium.Normal.Black"
+            app:layout_constraintHorizontal_bias="1"/>
+
+        <vn.minerva.sale.func.chatting.screen.chatting.data.ClickableTextView
+            android:id="@+id/tvMessageContent"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:paddingBottom="12dp"
+            tools:text="Cho hỏi câu số 3 có ý nghĩa gì vậy bạn?"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMessageTimeSent"
+        android:textSize="10sp"
+        tools:text="Gửi lúc 1:45 PM"
+        android:textStyle="italic"
+        android:layout_marginTop="@dimen/spacing_4dp"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/llContentMessage"
+        app:layout_constraintTop_toBottomOf="@id/llContentMessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civAvatarIncoming"
+        android:src="@drawable/ic_user_green"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

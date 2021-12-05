@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vn.minerva.sale.app.util.view.bubble_layout.BubbleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/blInfoWindow"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:bl_arrowDirection="bottom_center"
+    app:bl_arrowHeight="8dp"
+    app:bl_arrowWidth="12dp"
+    app:bl_bubbleColor="@android:color/white"
+    app:bl_cornersRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_6dp"
+            android:layout_marginTop="@dimen/spacing_6dp"
+            android:layout_marginEnd="@dimen/spacing_6dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/color_6d30ab"
+            android:textSize="@dimen/text_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tran Thi Thu Trang" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_6dp"
+            android:layout_marginTop="@dimen/spacing_5dp"
+            android:layout_marginEnd="@dimen/spacing_6dp"
+            android:layout_marginBottom="@dimen/spacing_10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_light_italic"
+            android:maxLength="40"
+            android:singleLine="true"
+            android:textColor="@color/color_404b69"
+            android:textSize="@dimen/text_10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            tools:text="79 - 83 Nguyễn Thị Thập, P. Tân Phong, Quận 7, TPH…" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</vn.minerva.sale.app.util.view.bubble_layout.BubbleLayout>
